@@ -1,0 +1,1001 @@
+zip_prefix,state,usps_scf,usps_scf_sub,default_place_name,scf_different_state,not_original_zip
+000,,Placeholders for areas with no proper zip code or addresses,,0,0,0
+001,,Destinations,outside U.S.,0,0,0
+002,,Not in use,,0,0,0
+003,,Not in use,,0,0,0
+004,,Not in use,,0,0,0
+005,NY,Holtsville,IRS,0,0,0
+006,PR,San Juan,West,0,0,0
+007,PR,San Juan,East,0,0,0
+008,VI,Virgin Islands,,0,1,0
+009,PR,San Juan,Main,0,0,0
+010,MA,Springfield,Vicinity,0,1,0
+011,MA,Springfield,Main,1,1,0
+012,MA,Pittsfield,,0,1,0
+013,MA,Greenfield,,0,0,0
+014,MA,Fitchburg,,0,0,0
+015,MA,Worcester,Vicinity,0,0,0
+016,MA,Worcester,Main,1,0,0
+017,MA,Framingham,,0,0,0
+018,MA,Woburn,,0,0,0
+019,MA,Lynn,,0,0,0
+020,MA,Brockton,West,0,0,0
+021,MA,Boston,Main 1/East branches,0,0,0
+022,MA,Boston,Main 2,0,0,0
+023,MA,Brockton,East,0,0,0
+024,MA,Boston,West branches,0,0,0
+025,MA,Hyannis,West,0,1,0
+026,MA,Hyannis,East,0,1,0
+027,MA,Providence (RI),East,0,1,0
+028,RI,Providence,West,0,0,0
+029,RI,Providence,Main,1,0,0
+030,NH,Manchester,Vicinity,0,0,0
+031,NH,Manchester,Main,1,0,0
+032,NH,Concord,Vicinity,0,0,0
+033,NH,Concord,,1,0,0
+034,NH,Keene,,0,0,0
+035,NH,Littleton,South,0,1,0
+036,NH,Bellows Falls (VT),East,0,1,0
+037,NH,White River Junction (VT),East,0,1,0
+038,NH,Portsmouth,West,0,0,0
+039,ME,Portsmouth (NH),East,0,0,0
+040,ME,Portland,Vicinity,0,0,0
+041,ME,Portland,Main,1,0,0
+042,ME,Auburn,,0,0,0
+043,ME,Augusta,,0,0,0
+044,ME,Bangor,,0,0,0
+045,ME,Bath,,0,0,0
+046,ME,Ellsworth,,0,0,0
+047,ME,Houlton,,0,0,0
+048,ME,Rockland,,0,0,0
+049,ME,Waterville,,0,0,0
+050,VT,White River Junction,West,0,0,0
+051,VT,Bellows Falls,West,0,0,0
+052,VT,Bennington,,0,0,0
+053,VT,Brattleboro,,0,0,0
+054,VT,Burlington,,0,0,0
+055,MA,Andover,IRS,0,0,0
+056,VT,Montpelier,,0,0,0
+057,VT,Rutland,,0,0,0
+058,VT,St. Johnsbury,,0,0,0
+059,VT,Littleton (NH),North,0,0,0
+060,CT,Hartford,Vicinity,0,0,0
+061,CT,Hartford,Main,1,0,0
+062,CT,Willimantic,,0,0,0
+063,CT,New London,,0,0,0
+064,CT,New Haven,Vicinity,0,0,0
+065,CT,New Haven,Main,1,0,0
+066,CT,Bridgeport,,1,1,0
+067,CT,Waterbury,,0,0,0
+068,CT,Stamford,Vicinity,0,1,0
+069,CT,Stamford,Main,1,1,0
+070,NJ,Newark,Vicinity,0,0,0
+071,NJ,Newark,Main/branches,1,0,0
+072,NJ,Elizabeth,,0,0,0
+073,NJ,Jersey City,,0,0,0
+074,NJ,Paterson,Vicinity,0,0,0
+075,NJ,Paterson,Main,1,0,0
+076,NJ,Hackensack,,0,0,0
+077,NJ,Red Bank,,0,0,0
+078,NJ,Dover,,0,0,0
+079,NJ,Summit,,0,0,0
+080,NJ,Camden,Vicinity,0,0,0
+081,NJ,Camden,Main/branches,1,0,0
+082,NJ,Atlantic City,East,0,0,0
+083,NJ,Atlantic City,West,0,0,0
+084,NJ,Atlantic City,Main,1,0,0
+085,NJ,Trenton,Vicinity,0,0,0
+086,NJ,Trenton,Main,1,0,0
+087,NJ,Lakewood,,0,0,0
+088,NJ,New Brunswick,Vicinity,0,0,0
+089,NJ,New Brunswick,Main,1,0,0
+090,AE,Military,Bases in DE,0,0,0
+091,AE,Military,Bases in DE,0,0,0
+092,AE,Military,Bases in DE,0,0,0
+093,AE,Military,"Bases in IQ, AF, other",0,0,0
+094,AE,Military,Bases in UK,0,0,0
+095,AE,Military,Naval/Marine,0,0,0
+096,AE,Military,"Bases in ES, IT",0,0,0
+097,AE,Military,"Bases in EU, GL, CA",0,0,0
+098,AE,Military,Africa/Middle East,0,0,0
+099,AE,Military,Africa/Middle East,0,0,0
+100,NY,New York,Main 1,1,0,0
+101,NY,New York,Main 2,1,0,0
+102,NY,New York,Main 3,1,0,0
+103,NY,Staten Island,,1,0,0
+104,NY,The Bronx,,1,0,0
+105,NY,White Plains,Vicinity,0,0,0
+106,NY,White Plains,Main,1,0,0
+107,NY,Yonkers,,1,0,0
+108,NY,New Rochelle,,1,0,0
+109,NY,Suffern,,0,0,0
+110,NY,Floral Park,,0,0,0
+111,NY,Long Island City,,0,0,0
+112,NY,Brooklyn,,1,0,0
+113,NY,Flushing,,0,0,0
+114,NY,Jamaica,,0,0,0
+115,NY,Mid-Island,,0,0,0
+116,NY,Far Rockaway,,0,0,0
+117,NY,Mid-Island,,0,0,0
+118,NY,Hicksville,,1,0,0
+119,NY,Mid-Island,,0,0,0
+120,NY,Albany,A-J,0,0,0
+121,NY,Albany,K-Z,0,0,0
+122,NY,Albany,Main,1,0,0
+123,NY,Schenectady,,1,0,0
+124,NY,Kingston,,0,0,0
+125,NY,Poughkeepsie,Vicinity,0,0,0
+126,NY,Poughkeepsie,Main,1,0,0
+127,NY,Monticello,,0,0,0
+128,NY,Glens Falls,,0,0,0
+129,NY,Plattsburgh,,0,0,0
+130,NY,Syracuse,A-L,0,0,0
+131,NY,Syracuse,M-Z,0,0,0
+132,NY,Syracuse,Main,1,0,0
+133,NY,Utica,A-L,0,0,0
+134,NY,Utica,M-Z,0,0,0
+135,NY,Utica,Main,1,0,0
+136,NY,Watertown,,0,0,0
+137,NY,Binghamton,A-L,0,0,0
+138,NY,Binghamton,M-Z,0,0,0
+139,NY,Binghamton,Main,1,0,0
+140,NY,Buffalo,A-L,0,0,0
+141,NY,Buffalo,M-Z,0,0,0
+142,NY,Buffalo,Main,1,0,0
+143,NY,Niagara Falls,,1,0,0
+144,NY,Rochester,A-L,0,0,0
+145,NY,Rochester,M-Z,0,0,0
+146,NY,Rochester,Main,1,0,0
+147,NY,Jamestown,,0,0,0
+148,NY,Elmira,Vicinity,0,0,0
+149,NY,Elmira,Main,1,0,0
+150,PA,Pittsburgh,Distant,0,0,0
+151,PA,Pittsburgh,Vicinity,0,0,0
+152,PA,Pittsburgh,Main,1,0,0
+153,PA,Washington,,0,0,0
+154,PA,Uniontown,,0,0,0
+155,PA,Somerset,,0,0,0
+156,PA,Greensburg,,0,0,0
+157,PA,Indiana,,0,0,0
+158,PA,DuBois,,0,0,0
+159,PA,Johnstown,,0,0,0
+160,PA,Butler,,0,0,0
+161,PA,New Castle,,0,0,0
+162,PA,Kittanning,,0,0,0
+163,PA,Oil City,,0,0,0
+164,PA,Erie,Vicinity,0,0,0
+165,PA,Erie,Main,1,0,0
+166,PA,Altoona,,0,0,0
+167,PA,Bradford,,0,1,0
+168,PA,State College,,0,0,0
+169,PA,Wellsboro,,0,0,0
+170,PA,Harrisburg,Vicinity,0,0,0
+171,PA,Harrisburg,Main,1,0,0
+172,PA,Chambersburg,,0,0,0
+173,PA,York,Vicinity,0,0,0
+174,PA,York,Main,1,0,0
+175,PA,Lancaster,Vicinity,0,0,0
+176,PA,Lancaster,Main,1,0,0
+177,PA,Williamsport,,0,0,0
+178,PA,Sunbury,,0,0,0
+179,PA,Pottsville,,0,0,0
+180,PA,Lehigh Valley,,0,0,0
+181,PA,Allentown,,1,0,0
+182,PA,Hazleton,,0,0,0
+183,PA,East Stroudsburg,,0,0,0
+184,PA,Scranton,Vicinity,0,0,0
+185,PA,Scranton,Main,1,0,0
+186,PA,Wilkes-Barre,Vicinity,0,0,0
+187,PA,Wilkes-Barre,Main,1,0,0
+188,PA,Montrose,,0,0,0
+189,PA,Doylestown,,0,0,0
+190,PA,Philadelphia,Vicinity,0,0,0
+191,PA,Philadelphia,Main,1,0,0
+192,PA,Philadelphia,IRS,0,0,0
+193,PA,Paoli,,0,1,0
+194,PA,Norristown,,0,0,0
+195,PA,Reading,Vicinity,0,0,0
+196,PA,Reading,Main,1,0,0
+197,DE,Wilmington,Vicinity,0,0,0
+198,DE,Wilmington,Main,1,0,0
+199,DE,Dover,,0,0,0
+200,DC,Washington,Main,1,0,0
+201,VA,Dulles,,0,0,1
+202,DC,Washington,Government,0,0,0
+203,DC,Washington,Government,0,0,0
+204,DC,Washington,Government,0,0,0
+205,DC,Washington,Government,0,0,0
+206,MD,Waldorf,,0,0,0
+207,MD,Washington (DC),East,0,0,0
+208,MD,Washington (DC),West,0,0,0
+209,MD,Washington (DC),North,1,0,0
+210,MD,Baltimore,Vicinity,0,0,0
+211,MD,Baltimore,Vicinity,0,0,0
+212,MD,Baltimore,Main,1,0,0
+213,,Not in use,,0,0,0
+214,MD,Annapolis,,1,0,0
+215,MD,Cumberland,North,0,0,0
+216,MD,Easton,,0,0,0
+217,MD,Frederick,,0,0,0
+218,MD,Salisbury,,0,0,0
+219,MD,Wilmington (DE),West,0,0,0
+220,VA,Washington (DC),A-L,0,0,0
+221,VA,Washington (DC),M-Z,0,0,0
+222,VA,Arlington,,1,0,0
+223,VA,Alexandria,,1,0,0
+224,VA,Fredericksburg,A-K,0,0,0
+225,VA,Fredericksburg,L-Z,0,0,0
+226,VA,Winchester,,0,0,0
+227,VA,Culpeper,,0,0,0
+228,VA,Harrisonburg,,0,0,0
+229,VA,Charlottesville,,0,0,0
+230,VA,Richmond,A-L,0,0,0
+231,VA,Richmond,M-Z,0,0,0
+232,VA,Richmond,Main,1,0,0
+233,VA,Norfolk,A-J,0,0,0
+234,VA,Norfolk,K-Z,0,0,0
+235,VA,Norfolk,Main,1,0,0
+236,VA,Newport News,,0,0,0
+237,VA,Portsmouth,,1,0,0
+238,VA,Petersburg,,0,0,0
+239,VA,Farmville,,0,0,0
+240,VA,Roanoke,Main/A-G,0,0,0
+241,VA,Roanoke,H-Z,0,0,0
+242,VA,Bristol,,0,1,0
+243,VA,Pulaski,,0,0,0
+244,VA,Staunton,,0,0,0
+245,VA,Lynchburg,,0,0,0
+246,VA,Bluefield (WV),South,0,1,0
+247,WV,Bluefield,North,0,0,0
+248,WV,Welch,,0,0,0
+249,WV,Lewisburg,,0,0,0
+250,WV,Charleston,A-G,0,0,0
+251,WV,Charleston,H-S,0,0,0
+252,WV,Charleston,T-Z/North,0,0,0
+253,WV,Charleston,Main,1,0,0
+254,WV,Martinsburg,,0,1,0
+255,WV,Huntington,Vicinity,0,0,0
+256,WV,Logan / Williamson,,0,0,0
+257,WV,Huntington,Main,1,0,0
+258,WV,Beckley,A-M,0,0,0
+259,WV,Beckley / Hinton,N-Z/Main,0,0,0
+260,WV,Wheeling,East,0,1,0
+261,WV,Parkersburg,,0,0,0
+262,WV,Buckhannon / Elkins,,0,0,0
+263,WV,Clarksburg,Main/A-L,0,0,0
+264,WV,Clarksburg,M-Z,0,0,0
+265,WV,Morgantown / Fairmont,,0,1,0
+266,WV,Sutton / Summersville,,0,0,0
+267,WV,Cumberland (MD),South,0,1,0
+268,WV,Harrisonburg (VA),North,0,1,0
+269,,Discontinued,,0,0,0
+270,NC,Greensboro,West,0,0,0
+271,NC,Winston-Salem,Main,1,0,0
+272,NC,Greensboro,"East, A-L",0,0,0
+273,NC,Greensboro,"East, M-Z",0,0,0
+274,NC,Greensboro,Main,1,0,0
+275,NC,Raleigh,Vicinity,0,0,0
+276,NC,Raleigh,Main,1,0,0
+277,NC,Durham,,1,0,0
+278,NC,Rocky Mount,,0,0,0
+279,NC,Elizabeth City,,0,0,0
+280,NC,Charlotte,A-L,0,0,0
+281,NC,Charlotte,M-Z,0,0,0
+282,NC,Charlotte,Main,1,0,0
+283,NC,Fayetteville,,0,0,0
+284,NC,Wilmington,,0,0,0
+285,NC,Kinston,,0,0,0
+286,NC,Hickory,,0,0,0
+287,NC,Asheville,Vicinity,0,1,0
+288,NC,Asheville,Main,1,1,0
+289,NC,Gainesville (GA),North,0,1,0
+290,SC,Columbia,A-L,0,0,0
+291,SC,Columbia,M-Z,0,0,0
+292,SC,Columbia,Main,1,0,0
+293,SC,Spartanburg,,0,0,0
+294,SC,Charleston,,0,0,0
+295,SC,Florence,,0,0,0
+296,SC,Greenville,,0,0,0
+297,SC,Charlotte (NC),South,0,1,0
+298,SC,Augusta (GA),North,0,1,0
+299,SC,Savannah (GA),North,0,0,0
+300,GA,Atlanta,East,0,0,0
+301,GA,Atlanta,Northwest,0,0,0
+302,GA,Atlanta,South,0,0,0
+303,GA,Atlanta,Main,1,0,0
+304,GA,Swainsboro,,0,0,0
+305,GA,Gainesville,,0,0,0
+306,GA,Athens,,0,0,0
+307,GA,Chattanooga (TN),South,0,1,0
+308,GA,Augusta,Vicinity,0,0,0
+309,GA,Augusta,Main,1,0,0
+310,GA,Macon,Vicinity,0,0,0
+311,GA,Atlanta,PO Boxes,1,0,0
+312,GA,Macon,Main,1,0,0
+313,GA,Savannah,Vicinity,0,1,0
+314,GA,Savannah,Main,1,1,0
+315,GA,Waycross,,0,1,0
+316,GA,Valdosta,,0,1,0
+317,GA,Albany,East,0,1,0
+318,GA,Columbus,Vicinity,0,0,0
+319,GA,Columbus,Main,1,0,0
+320,FL,Jacksonville,North,0,0,0
+321,FL,Jacksonville,South,0,0,1
+322,FL,Jacksonville,Main,1,0,0
+323,FL,Tallahassee,,0,0,0
+324,FL,Panama City,,0,0,0
+325,FL,Pensacola,,0,0,0
+326,FL,Gainesville,North,0,0,0
+327,FL,Orlando,North,0,0,0
+328,FL,Orlando,Main,1,0,0
+329,FL,Melbourne,,0,0,0
+330,FL,Miami,Vicinity,0,0,0
+331,FL,Miami,Main,1,0,0
+332,FL,Miami,PO Boxes,0,0,0
+333,FL,Fort Lauderdale,,1,0,0
+334,FL,West Palm Beach,South,0,0,0
+335,FL,Tampa,Central,0,0,0
+336,FL,Tampa,Main,1,0,0
+337,FL,St. Petersburg,,0,0,0
+338,FL,Lakeland,,0,0,0
+339,FL,Fort Myers,North,0,0,0
+340,AA,Military,Americas,0,0,0
+341,FL,Fort Myers,South,0,0,1
+342,FL,Tampa,South,0,0,1
+343,,Not in use,,0,0,0
+344,FL,Gainesville,South,0,0,1
+345,,Not in use,,0,0,0
+346,FL,Tampa,North,0,0,1
+347,FL,Orlando,South,0,0,1
+348,,Not in use,,0,0,0
+349,FL,West Palm Beach,North,0,0,1
+350,AL,Birmingham,A-L,0,0,0
+351,AL,Birmingham,M-Z,0,0,0
+352,AL,Birmingham,Main,1,0,0
+353,,Not in use,,0,0,0
+354,AL,Tuscaloosa,,0,0,0
+355,AL,Jasper,,0,0,0
+356,AL,Decatur,,0,0,0
+357,AL,Huntsville,Vicinity,0,0,0
+358,AL,Huntsville,Main,0,0,0
+359,AL,Gadsden,,0,0,0
+360,AL,Montgomery,Vicinity,0,0,0
+361,AL,Montgomery,Main,1,0,0
+362,AL,Anniston,,0,0,0
+363,AL,Dothan,,0,0,0
+364,AL,Evergreen,,0,0,0
+365,AL,Mobile,Vicinity,0,0,0
+366,AL,Mobile,Main,1,0,0
+367,AL,Selma,,0,0,0
+368,AL,Opelika,,0,0,0
+369,AL,Meridian (MS),East,0,1,0
+370,TN,Nashville,A-L,0,0,0
+371,TN,Nashville,M-Z,0,0,0
+372,TN,Nashville,Main,1,0,0
+373,TN,Chattanooga,North,0,0,0
+374,TN,Chattanooga,Main,1,0,0
+375,TN,Memphis,IRS,0,0,0
+376,TN,Johnson City,,0,0,0
+377,TN,Knoxville,A-L,0,0,0
+378,TN,Knoxville,M-Z,0,0,0
+379,TN,Knoxville,Main,1,0,0
+380,TN,Memphis,North,0,0,0
+381,TN,Memphis,Main,1,0,0
+382,TN,McKenzie,,0,0,0
+383,TN,Jackson,,0,0,0
+384,TN,Columbia,,0,0,0
+385,TN,Cookeville,,0,0,0
+386,MS,Memphis (TN),South,0,1,0
+387,MS,Greenville,,0,0,0
+388,MS,Tupelo,,0,1,0
+389,MS,Grenada,,0,0,0
+390,MS,Jackson,A-L,0,0,0
+391,MS,Jackson,M-Z,0,0,0
+392,MS,Jackson,Main,1,0,0
+393,MS,Meridian,,0,0,0
+394,MS,Hattiesburg,,0,1,0
+395,MS,Gulfport,,0,0,0
+396,MS,Brookhaven,,0,0,0
+397,MS,Columbus,,0,0,0
+398,GA,Albany,West,0,1,1
+399,GA,Atlanta,IRS,0,0,0
+400,KY,Louisville,East,0,0,0
+401,KY,Louisville,West,0,0,0
+402,KY,Louisville,Main,1,0,0
+403,KY,Lexington,North,0,0,0
+404,KY,Lexington,South,0,0,0
+405,KY,Lexington,Main,1,0,0
+406,KY,Frankfort,,0,0,0
+407,KY,Corbin,West,0,1,0
+408,KY,Corbin,East,0,1,0
+409,KY,Corbin,Central,0,1,0
+410,KY,Cincinnati (OH),South,0,1,0
+411,KY,Ashland,North,0,1,0
+412,KY,Ashland,South,0,1,0
+413,KY,Campton,South,0,0,0
+414,KY,Campton,North,0,0,0
+415,KY,Pikeville,East,0,1,0
+416,KY,Pikeville,West,0,1,0
+417,KY,Hazard,West,0,1,0
+418,KY,Hazard,East,0,1,0
+419,,Not in use,,0,0,0
+420,KY,Paducah,,0,1,0
+421,KY,Bowling Green,East,0,1,0
+422,KY,Bowling Green,West,0,1,0
+423,KY,Owensboro,,0,1,0
+424,KY,Evansville (IN),South,0,1,0
+425,KY,Somerset,South,0,1,0
+426,KY,Somerset,North,0,1,0
+427,KY,Elizabethtown,,0,0,0
+428,,Not in use,,0,0,0
+429,,Not in use,,0,0,0
+430,OH,Columbus,North,0,0,0
+431,OH,Columbus,South,0,0,0
+432,OH,Columbus,Main,1,0,0
+433,OH,Marion,,0,0,0
+434,OH,Toledo,East,0,1,0
+435,OH,Toledo,West,0,1,0
+436,OH,Toledo,Main,1,1,0
+437,OH,Zanesville,South,0,0,0
+438,OH,Zanesville,North,0,0,0
+439,OH,Wheeling (WV),West,0,1,0
+440,OH,Cleveland,Vicinity,0,0,0
+441,OH,Cleveland,Main,1,0,0
+442,OH,Akron,Vicinity,0,0,0
+443,OH,Akron,Main,1,0,0
+444,OH,Youngstown,Vicinity,0,0,0
+445,OH,Youngstown,Main,1,0,0
+446,OH,Canton,Vicinity,0,0,0
+447,OH,Canton,Main,1,0,0
+448,OH,Mansfield,Vicinity,0,0,0
+449,OH,Mansfield,Main,1,0,0
+450,OH,Cincinnati,North,0,0,0
+451,OH,Cincinnati,East,0,0,0
+452,OH,Cincinnati,Main,1,0,0
+453,OH,Dayton,Vicinity,0,0,0
+454,OH,Dayton,Main,1,0,0
+455,OH,Springfield,,1,0,0
+456,OH,Chillicothe,,0,0,0
+457,OH,Athens,,0,0,0
+458,OH,Lima,,0,0,0
+459,OH,Cincinnati,IRS,0,0,0
+460,IN,Indianapolis,North,0,0,0
+461,IN,Indianapolis,South,0,0,0
+462,IN,Indianapolis,Main,1,0,0
+463,IN,Gary,Vicinity,0,0,0
+464,IN,Gary,Main,1,0,0
+465,IN,South Bend,South,0,0,0
+466,IN,South Bend,Main,1,0,0
+467,IN,Fort Wayne,Vicinity,0,0,0
+468,IN,Fort Wayne,Main,1,0,0
+469,IN,Kokomo,,0,0,0
+470,IN,Cincinnati (OH),West,0,1,0
+471,IN,Louisville (KY),North,0,1,0
+472,IN,Columbus,,0,0,0
+473,IN,Muncie,,0,0,0
+474,IN,Bloomington,,0,0,0
+475,IN,Washington,,0,0,0
+476,IN,Evansville,Vicinity,0,0,0
+477,IN,Evansville,Main,1,0,0
+478,IN,Terre Haute,,0,0,0
+479,IN,Lafayette,,0,0,0
+480,MI,Detroit,Northeast,0,0,0
+481,MI,Detroit,Southwest,0,0,0
+482,MI,Detroit,Main,1,0,0
+483,MI,Detroit,Northwest,0,0,1
+484,MI,Flint,Vicinity,0,0,0
+485,MI,Flint,Main,1,0,0
+486,MI,Saginaw,West,0,0,0
+487,MI,Saginaw,East,0,0,0
+488,MI,Lansing,Vicinity,0,0,0
+489,MI,Lansing,Main,1,0,0
+490,MI,Kalamazoo,,0,0,0
+491,MI,South Bend (IN),North,0,0,0
+492,MI,Jackson,,0,0,0
+493,MI,Grand Rapids,East,0,0,0
+494,MI,Grand Rapids,West,0,0,0
+495,MI,Grand Rapids,Main,1,0,0
+496,MI,Cadillac,,0,0,0
+497,MI,Mackinaw City,,0,0,0
+498,MI,Iron Mountain,East,0,0,0
+499,MI,Iron Mountain,West,0,0,0
+500,IA,Des Moines,A-F,0,0,0
+501,IA,Des Moines,G-M,0,0,0
+502,IA,Des Moines,N-Z,0,0,0
+503,IA,Des Moines,Main 1,1,0,0
+504,IA,Mason City,,0,0,0
+505,IA,Fort Dodge,,0,0,0
+506,IA,Waterloo,Vicinity,0,0,0
+507,IA,Waterloo,Main,1,0,0
+508,IA,Creston,,0,0,0
+509,IA,Des Moines,Main 2,0,0,0
+510,IA,Sioux City,Vicinity,0,1,0
+511,IA,Sioux City,Main,1,1,0
+512,IA,Sheldon,,0,1,0
+513,IA,Spencer,,0,1,0
+514,IA,Carroll,,0,0,0
+515,IA,Council Bluffs,,0,1,0
+516,IA,Shenandoah,,0,1,0
+517,,Not in use,,0,0,0
+518,,Not in use,,0,0,0
+519,,Not in use,,0,0,0
+520,IA,Dubuque,West,0,0,0
+521,IA,Decorah,,0,0,0
+522,IA,Cedar Rapids,A-L,0,0,0
+523,IA,Cedar Rapids,M-Z,0,0,0
+524,IA,Cedar Rapids,Main,1,0,0
+525,IA,Ottumwa,,0,0,0
+526,IA,Burlington,,0,1,0
+527,IA,Davenport,Vicinity,0,1,0
+528,IA,Davenport,Main,1,1,0
+529,,Not in use,,0,0,0
+530,WI,Milwaukee,North,0,0,0
+531,WI,Milwaukee,South,0,0,0
+532,WI,Milwaukee,Main,1,0,0
+533,,Not in use,,0,0,0
+534,WI,Racine,,1,0,0
+535,WI,Madison,Vicinity,0,0,0
+536,,Not in use,,0,0,0
+537,WI,Madison,Main,1,0,0
+538,WI,Dubuque (IA),East,0,0,0
+539,WI,Portage,,0,0,0
+540,WI,St. Paul (MN),East,0,1,0
+541,WI,Green Bay,West,0,0,0
+542,WI,Green Bay,East,0,0,0
+543,WI,Green Bay,Main,1,0,0
+544,WI,Wausau,,0,0,0
+545,WI,Rhinelander,,0,0,0
+546,WI,La Crosse,,0,1,0
+547,WI,Eau Claire,,0,0,0
+548,WI,Spooner,,0,0,0
+549,WI,Oshkosh,,0,0,0
+550,MN,St. Paul,Vicinity,0,0,0
+551,MN,St. Paul,Main,1,0,0
+552,,Not in use,,0,0,0
+553,MN,Minneapolis,Vicinity 1,0,0,0
+554,MN,Minneapolis,Main,1,0,0
+555,MN,Minneapolis,Vicinity 2,0,0,0
+556,MN,Duluth,East,0,0,0
+557,MN,Duluth,West,0,0,0
+558,MN,Duluth,Main,1,0,0
+559,MN,Rochester,,0,0,0
+560,MN,Mankato,,0,0,0
+561,MN,Windom,,0,0,0
+562,MN,Willmar,,0,0,0
+563,MN,St. Cloud,,0,0,0
+564,MN,Brainerd,,0,0,0
+565,MN,Detroit Lakes,,0,1,0
+566,MN,Bemidji,,0,0,0
+567,MN,Thief River Falls,,0,1,0
+568,,Not in use,,0,0,0
+569,DC,Washington,Parcel return,1,0,0
+570,SD,Sioux Falls,Vicinity,0,0,0
+571,SD,Sioux Falls,Main,1,0,0
+572,SD,Watertown,,0,0,0
+573,SD,Mitchell,,0,0,0
+574,SD,Aberdeen,,0,0,0
+575,SD,Pierre,,0,0,0
+576,SD,Mobridge,,0,1,0
+577,SD,Rapid City,,0,0,0
+578,,Not in use,,0,0,0
+579,,Not in use,,0,0,0
+580,ND,Fargo,Vicinity,0,0,0
+581,ND,Fargo,Main,1,0,0
+582,ND,Grand Forks,,0,0,0
+583,ND,Devils Lake,,0,0,0
+584,ND,Jamestown,,0,0,0
+585,ND,Bismarck,,0,0,0
+586,ND,Dickinson,,0,0,0
+587,ND,Minot,,0,0,0
+588,ND,Williston,,0,0,0
+589,,Not in use,,0,0,0
+590,MT,Billings,Vicinity,0,0,0
+591,MT,Billings,Main,1,0,0
+592,MT,Wolf Point,,0,0,0
+593,MT,Miles City,,0,0,0
+594,MT,Great Falls,,0,0,0
+595,MT,Havre,,0,0,0
+596,MT,Helena,,0,0,0
+597,MT,Butte,,0,0,0
+598,MT,Missoula,,0,0,0
+599,MT,Kalispell,,0,0,0
+600,IL,Chicago,North,0,0,0
+601,IL,Chicago,Northwest,0,0,0
+602,IL,Evanston,,1,0,0
+603,IL,Oak Park,,1,0,0
+604,IL,Chicago,South,0,0,0
+605,IL,Chicago,Southwest,0,0,0
+606,IL,Chicago,Main,1,0,0
+607,IL,Chicago,Branches 1,1,0,1
+608,IL,Chicago,Branches 2,1,0,1
+609,IL,Kankakee,,0,0,0
+610,IL,Rockford,Vicinity,0,0,0
+611,IL,Rockford,Main,1,0,0
+612,IL,Rock Island,,0,0,0
+613,IL,LaSalle,,0,0,0
+614,IL,Galesburg,,0,0,0
+615,IL,Peoria,Vicinity,0,0,0
+616,IL,Peoria,Main,1,0,0
+617,IL,Bloomington,,0,0,0
+618,IL,Urbana,North,0,0,0
+619,IL,Urbana,South,0,0,0
+620,IL,St. Louis (MO),Northeast,0,1,0
+621,,Not in use,,0,0,0
+622,IL,East St. Louis,,0,1,0
+623,IL,Quincy,,0,0,0
+624,IL,Effingham,,0,0,0
+625,IL,Springfield,East,0,0,0
+626,IL,Springfield,West,0,0,0
+627,IL,Springfield,Main,1,0,0
+628,IL,Centralia,,0,1,0
+629,IL,Carbondale,,0,1,0
+630,MO,St. Louis,Vicinity,0,0,0
+631,MO,St. Louis,Main,1,0,0
+632,,Not in use,,0,0,0
+633,MO,St. Charles,,0,0,0
+634,MO,Hannibal,,0,0,0
+635,MO,Kirksville,,0,0,0
+636,MO,Park Hills,,0,0,0
+637,MO,Cape Girardeau,,0,0,0
+638,MO,Sikeston,,0,0,0
+639,MO,Poplar Bluff,,0,0,0
+640,MO,Kansas City,Vicinity,0,0,0
+641,MO,Kansas City,Main,1,0,0
+642,,Not in use,,0,0,0
+643,,Not in use,,0,0,0
+644,MO,St. Joseph,Vicinity,0,0,0
+645,MO,St. Joseph,Main,1,0,0
+646,MO,Chillicothe,,0,0,0
+647,MO,Harrisonville,,0,0,0
+648,MO,Joplin,,0,0,0
+649,MO,Kansas City,IRS,0,0,0
+650,MO,Jefferson City,Vicinity,0,0,0
+651,MO,Jefferson City,Main,1,0,0
+652,MO,Columbia,,0,0,0
+653,MO,Sedalia,,0,0,0
+654,MO,Rolla,Main/A-I,0,0,0
+655,MO,Rolla,J-Z,0,0,0
+656,MO,Springfield,A-L,0,0,0
+657,MO,Springfield,M-Z,0,0,0
+658,MO,Springfield,Main,1,0,0
+659,,Not in use,,0,0,0
+660,KS,Kansas City,Vicinity,0,1,0
+661,KS,Kansas City,Main,1,1,0
+662,KS,Overland Park,,1,1,0
+663,,Not in use,,0,0,0
+664,KS,Topeka,A-L,0,1,0
+665,KS,Topeka,M-Z,0,1,0
+666,KS,Topeka,Main,1,1,0
+667,KS,Fort Scott,,0,1,0
+668,KS,Emporia,,0,1,0
+669,KS,Concordia,,0,0,0
+670,KS,Wichita,A-L,0,0,0
+671,KS,Wichita,M-Z,0,0,0
+672,KS,Wichita,Main,1,0,0
+673,KS,Independence,,0,0,0
+674,KS,Salina,,0,0,0
+675,KS,Hutchinson,,0,0,0
+676,KS,Hays,,0,0,0
+677,KS,Colby,,0,1,0
+678,KS,Dodge City,,0,0,0
+679,KS,Liberal,,0,1,0
+680,NE,Omaha,Vicinity,0,0,0
+681,NE,Omaha,Main,1,0,0
+682,,Not in use,,0,0,0
+683,NE,Lincoln,A-L,0,0,0
+684,NE,Lincoln,M-Z,0,0,0
+685,NE,Lincoln,Main,1,0,0
+686,NE,Columbus,,0,0,0
+687,NE,Norfolk,,0,0,0
+688,NE,Grand Island,,0,0,0
+689,NE,Hastings,,0,0,0
+690,NE,McCook,,0,0,0
+691,NE,North Platte,,0,0,0
+692,NE,Valentine,,0,0,0
+693,NE,Alliance,,0,0,0
+694,,Not in use,,0,0,0
+695,,Not in use,,0,0,0
+696,,Not in use,,0,0,0
+697,,Not in use,,0,0,0
+698,,Not in use,,0,0,0
+699,,Not in use,,0,0,0
+700,LA,Metairie,,0,0,0
+701,LA,New Orleans,,1,0,0
+702,,Not in use,,0,0,0
+703,LA,Thibodaux,,0,0,0
+704,LA,Hammond,,0,0,0
+705,LA,Lafayette,,0,0,0
+706,LA,Lake Charles,,0,0,0
+707,LA,Baton Rouge,Vicinity,0,0,0
+708,LA,Baton Rouge,Main,1,0,0
+709,,Not in use,,0,0,0
+710,LA,Shreveport,Vicinity,0,0,0
+711,LA,Shreveport,Main,1,0,0
+712,LA,Monroe,,0,0,0
+713,LA,Alexandria,East,0,0,0
+714,LA,Alexandria,West,0,0,0
+715,,Not in use,,0,0,0
+716,AR,Pine Bluff,,0,0,0
+717,AR,Camden,,0,0,0
+718,AR,Hope,,0,1,0
+719,AR,Hot Springs,,0,0,0
+720,AR,Little Rock,A-L,0,0,0
+721,AR,Little Rock,M-Z,0,0,0
+722,AR,Little Rock,Main,1,0,0
+723,AR,West Memphis,,0,1,0
+724,AR,Jonesboro,,0,1,0
+725,AR,Batesville,,0,0,0
+726,AR,Harrison,,0,0,0
+727,AR,Fayetteville,,0,0,0
+728,AR,Russellville,,0,0,0
+729,AR,Fort Smith,East,0,0,0
+730,OK,Oklahoma City,Vicinity,0,0,0
+731,OK,Oklahoma City,Main,1,0,0
+732,,Not in use,,0,0,0
+733,TX,Austin,IRS,0,0,0
+734,OK,Ardmore,,0,0,0
+735,OK,Lawton,,0,0,0
+736,OK,Clinton,,0,0,0
+737,OK,Enid,,0,0,0
+738,OK,Woodward,,0,0,0
+739,OK,Liberal (KS),South,0,1,0
+740,OK,Tulsa,Vicinity,0,0,0
+741,OK,Tulsa,Main,1,0,0
+742,,Not in use,,0,0,0
+743,OK,Vinita,,0,0,0
+744,OK,Muskogee,,0,0,0
+745,OK,McAlester,,0,0,0
+746,OK,Ponca City,,0,0,0
+747,OK,Durant,,0,0,0
+748,OK,Shawnee,,0,0,0
+749,OK,Fort Smith (AR),West,0,0,0
+750,TX,Dallas,North,0,0,0
+751,TX,Dallas,South,0,0,0
+752,TX,Dallas,Main,1,0,0
+753,TX,Dallas,PO Boxes,1,0,0
+754,TX,Greenville,,0,0,0
+755,TX,Texarkana,,0,1,0
+756,TX,Longview,,0,1,0
+757,TX,Tyler,,0,0,0
+758,TX,Palestine,,0,0,0
+759,TX,Lufkin,,0,1,0
+760,TX,Fort Worth,Vicinity,0,0,0
+761,TX,Fort Worth,Main,1,0,0
+762,TX,Denton,,0,0,0
+763,TX,Wichita Falls,,0,0,0
+764,TX,Stephenville,,0,0,0
+765,TX,Temple,,0,0,0
+766,TX,Waco,Vicinity,0,0,0
+767,TX,Waco,Main,1,0,0
+768,TX,Brownwood,,0,0,0
+769,TX,San Angelo,,0,0,0
+770,TX,Houston,Main 1,1,0,0
+771,,Not in use,,0,0,0
+772,TX,Houston,PO Boxes,1,0,0
+773,TX,Conroe,,0,0,0
+774,TX,Bellaire,,0,0,0
+775,TX,Pasadena,,0,0,0
+776,TX,Beaumont,Vicinity,0,0,0
+777,TX,Beaumont,Main,1,0,0
+778,TX,Bryan,,0,0,0
+779,TX,Victoria,,0,0,0
+780,TX,San Antonio,West,0,0,0
+781,TX,San Antonio,East,0,0,0
+782,TX,San Antonio,Main,1,0,0
+783,TX,Corpus Christi,Vicinity,0,0,0
+784,TX,Corpus Christi,Main,1,0,0
+785,TX,McAllen,,0,0,0
+786,TX,Austin,Vicinity,0,0,0
+787,TX,Austin,Main,1,0,0
+788,TX,Uvalde,,0,0,0
+789,TX,La Grange,,0,0,0
+790,TX,Amarillo,Vicinity,0,0,0
+791,TX,Amarillo,Main,1,0,0
+792,TX,Childress,,0,0,0
+793,TX,Lubbock,Vicinity,0,0,0
+794,TX,Lubbock,Main,1,0,0
+795,TX,Abilene,Vicinity,0,0,0
+796,TX,Abilene,Main,1,0,0
+797,TX,Midland,,0,0,0
+798,TX,El Paso,Vicinity,0,0,0
+799,TX,El Paso,Main,1,0,0
+800,CO,Denver,North,0,0,0
+801,CO,Denver,South,0,0,0
+802,CO,Denver,Main,1,0,0
+803,CO,Boulder,,0,0,0
+804,CO,Golden,,0,0,0
+805,CO,Longmont,,0,0,0
+806,CO,Brighton,,0,0,0
+807,CO,Fort Morgan,,0,0,0
+808,CO,Colorado Springs,Vicinity,0,0,0
+809,CO,Colorado Springs,Main,1,0,0
+810,CO,Pueblo,,0,0,0
+811,CO,Alamosa,,0,0,0
+812,CO,Salida,,0,0,0
+813,CO,Durango,,0,1,0
+814,CO,Montrose,,0,0,0
+815,CO,Grand Junction,,0,0,0
+816,CO,Glenwood Springs,,0,0,0
+817,,Not in use,,0,0,0
+818,,Not in use,,0,0,0
+819,,Not in use,,0,0,0
+820,WY,Cheyenne,,0,0,0
+821,WY,Yellowstone National Park,,1,1,1
+822,WY,Wheatland,,0,0,0
+823,WY,Rawlins,,0,0,0
+824,WY,Worland,,0,0,0
+825,WY,Riverton,,0,0,0
+826,WY,Casper,,1,0,0
+827,WY,Newcastle,,0,0,0
+828,WY,Sheridan,,0,0,0
+829,WY,Rock Springs,,0,1,0
+830,WY,Jackson,,0,1,0
+831,WY,Kemmerer,,0,1,0
+832,ID,Pocatello,,0,1,0
+833,ID,Twin Falls,,0,0,0
+834,ID,Idaho Falls,,0,1,0
+835,ID,Lewiston,East,0,1,0
+836,ID,Boise,Vicinity,0,0,0
+837,ID,Boise,Main,1,0,0
+838,ID,Spokane (WA),East,0,1,0
+839,,Not in use,,0,0,0
+840,UT,Salt Lake City,Vicinity,0,0,0
+841,UT,Salt Lake City,Main,1,0,0
+842,UT,Ogden,IRS,0,0,0
+843,UT,Ogden,Vicinity,0,0,0
+844,UT,Ogden,Main,1,0,0
+845,UT,Price,,0,0,0
+846,UT,Provo,,0,0,0
+847,UT,Richfield,,0,0,0
+848,,Not in use,,0,0,0
+849,,Not in use,,0,0,0
+850,AZ,Phoenix,Main,1,0,0
+851,AZ,Mesa,South,0,0,1
+852,AZ,Mesa,,0,0,0
+853,AZ,Glendale,,0,0,0
+854,,Not in use,,0,0,0
+855,AZ,Globe,,0,0,0
+856,AZ,Tucson,Vicinity,0,0,0
+857,AZ,Tucson,Main,1,0,0
+858,,Not in use,,0,0,0
+859,AZ,Show Low,,0,0,0
+860,AZ,Flagstaff,,0,0,0
+861,,Not in use,,0,0,0
+862,,Not in use,,0,0,0
+863,AZ,Prescott,,0,0,0
+864,AZ,Kingman,,0,1,0
+865,AZ,Gallup (NM),West,0,1,0
+866,,Not in use,,0,0,0
+867,,Not in use,,0,0,0
+868,,Not in use,,0,0,0
+869,,Not in use,,0,0,0
+870,NM,Albuquerque,Vicinity,0,0,0
+871,NM,Albuquerque,Main,1,0,0
+872,,Not in use,,0,0,0
+873,NM,Gallup,,0,0,0
+874,NM,Farmington,,0,0,0
+875,NM,Santa Fe,,0,0,0
+876,,Not in use,,0,0,0
+877,NM,Las Vegas,,0,0,0
+878,NM,Socorro,,0,0,0
+879,NM,Truth or Consequences,,0,0,0
+880,NM,Las Cruces,,0,1,0
+881,NM,Clovis,,0,1,0
+882,NM,Roswell,,0,1,0
+883,NM,Carrizozo,,0,1,0
+884,NM,Tucumcari,,0,0,0
+885,TX,El Paso,PO Boxes,1,0,0
+886,,Not in use,,0,0,0
+887,,Not in use,,0,0,0
+888,,"North Pole, Santa Claus",,0,0,0
+889,NV,The Lakes,Unique,0,0,1
+890,NV,Las Vegas,Vicinity,0,0,0
+891,NV,Las Vegas,Main,1,0,0
+892,,Not in use,,0,0,0
+893,NV,Ely,,0,0,0
+894,NV,Reno,East,0,0,0
+895,NV,Reno,Main,1,0,0
+896,,Not in use,,0,0,0
+897,NV,Carson City,,0,0,0
+898,NV,Elko,,0,1,0
+899,,Not in use,,0,0,0
+900,CA,Los Angeles,Main 1,1,0,0
+901,CA,Los Angeles,Main 2,1,0,0
+902,CA,Inglewood,Vicinity,0,0,0
+903,CA,Inglewood,,1,0,0
+904,CA,Santa Monica,,1,0,0
+905,CA,Torrance,,1,0,0
+906,CA,Whittier,,0,0,0
+907,CA,Long Beach,Vicinity,0,0,0
+908,CA,Long Beach,Main,1,0,0
+909,,Not in use,,0,0,0
+910,CA,Pasadena,Vicinity,0,0,0
+911,CA,Pasadena,Main,1,0,0
+912,CA,Glendale,,1,0,0
+913,CA,Van Nuys,Vicinity,0,0,0
+914,CA,Van Nuys,Main,1,0,0
+915,CA,Burbank,,1,0,0
+916,CA,North Hollywood,,1,0,0
+917,CA,Alhambra,Vicinity,0,0,0
+918,CA,Alhambra,,1,0,0
+919,CA,San Diego,South,0,0,1
+920,CA,San Diego,North,0,0,0
+921,CA,San Diego,Main,1,0,0
+922,CA,Indio,,0,0,0
+923,CA,San Bernardino,Vicinity,0,0,0
+924,CA,San Bernardino,Main,1,0,0
+925,CA,Riverside,,0,0,0
+926,CA,Santa Ana,Vicinity,0,0,0
+927,CA,Santa Ana,,0,0,0
+928,CA,Anaheim,,0,0,0
+929,,Not in use,,0,0,0
+930,CA,Ventura,,0,0,0
+931,CA,Santa Barbara,,1,0,0
+932,CA,Bakersfield,Vicinity,0,0,0
+933,CA,Bakersfield,Main,1,0,0
+934,CA,San Luis Obispo,,0,0,0
+935,CA,Mojave,,0,0,0
+936,CA,Fresno,Vicinity,0,0,0
+937,CA,Fresno,Main,1,0,0
+938,CA,Fresno,IRS,0,0,0
+939,CA,Salinas,,0,0,0
+940,CA,San Francisco,South,0,0,0
+941,CA,San Francisco,Main,1,0,0
+942,CA,Sacramento,PO Boxes,0,0,1
+943,CA,Palo Alto,,1,0,0
+944,CA,San Mateo,,1,0,0
+945,CA,Oakland,Vicinity,0,0,0
+946,CA,Oakland,Main,1,0,0
+947,CA,Berkeley,,1,0,0
+948,CA,Richmond,,1,0,0
+949,CA,San Rafael,,0,0,0
+950,CA,San Jose,Vicinity,0,0,0
+951,CA,San Jose,Main,1,0,0
+952,CA,Stockton,North,0,0,0
+953,CA,Stockton,South,0,0,0
+954,CA,Santa Rosa,,0,0,0
+955,CA,Eureka,,0,0,0
+956,CA,Sacramento,Vicinity 1,0,0,0
+957,CA,Sacramento,Distantly east/Vicinity 2,0,0,0
+958,CA,Sacramento,Main,1,0,0
+959,CA,Marysville,,0,0,0
+960,CA,Redding,,0,0,0
+961,CA,Reno (NV),West,0,1,0
+962,AP,Military,Bases in KR,0,0,0
+963,AP,Military,Bases in JP,0,0,0
+964,AP,Military,Bases in PH,0,0,0
+965,AP,Military,Pacific & Antarctic bases,0,0,0
+966,AP,Military,Naval/Marine,0,0,0
+967,HI,Honolulu,Vicinity/AS,0,0,0
+968,HI,Honolulu,Main,1,0,0
+969,GU,Barrigada,"(PW, FM, MP, MH)",0,0,0
+970,OR,Portland,East,0,0,0
+971,OR,Portland,West,0,0,0
+972,OR,Portland,Main,1,0,0
+973,OR,Salem,,0,0,0
+974,OR,Eugene,,0,0,0
+975,OR,Medford,,0,0,0
+976,OR,Klamath Falls,,0,0,0
+977,OR,Bend,,0,0,0
+978,OR,Pendleton,,0,0,0
+979,OR,Boise (ID),West,0,1,0
+980,WA,Seattle,Vicinity,0,0,0
+981,WA,Seattle,Main,1,0,0
+982,WA,Everett,,0,0,0
+983,WA,Tacoma,Vicinity,0,0,0
+984,WA,Tacoma,Main,1,0,0
+985,WA,Olympia,,0,0,0
+986,WA,Vancouver,Main,0,1,0
+987,,Discontinued,,0,0,0
+988,WA,Wenatchee,,0,0,0
+989,WA,Yakima,,0,0,0
+990,WA,Spokane,Vicinity,0,0,0
+991,WA,Spokane,Distant,0,0,0
+992,WA,Spokane,Main,1,0,0
+993,WA,Pasco,,0,0,0
+994,WA,Lewiston (ID),West,0,0,0
+995,AK,Anchorage,Main/A-G,0,0,0
+996,AK,Anchorage,H-Z,0,0,0
+997,AK,Fairbanks,,0,0,0
+998,AK,Juneau,,0,0,0
+999,AK,Ketchikan,,0,0,0
