@@ -109,9 +109,6 @@ zcta_cb_cw <- data.table::fread("data/raw/tab20_zcta520_tabblock20_natl.txt",
                                                rep("character",2), rep("numeric",2)),
                                 select = c("GEOID_ZCTA5_20", "GEOID_TABBLOCK_20"))
 
-zip_code_prefixes <- data.table::fread("data/zip_code_prefix.csv",
-                                       colClasses = c(rep("character",4), rep("numeric",3)))
-
 states <- c("CA", "CO", "FL", "LA", "MA", "MI", "NJ", "NY", "PA", "SC", "VA")
 sapply(states, function(x) run_pwc(x, 2020))
 # run_pwc("PA", 2020)
