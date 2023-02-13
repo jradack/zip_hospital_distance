@@ -5,7 +5,7 @@
 
 library(sf)
 
-zcta <- st_read("\\\\chop.edu/researchprd/CPHD/5. Data Support/Geographic Data/SHP files/ZCTA/2018/tl_2018_us_zcta510.shp")
+zcta <- st_read("\\\\chop.edu/researchprd/CPHD/5. Data Support/Geographic Data/SHP files/ZCTA/2020/tl_2020_us_zcta520.shp")
 pwc <- read.csv("data/centroids/PA_2020_pwc.csv")
 
 state <- "PA"
@@ -36,11 +36,13 @@ pwc <- st_as_sf(pwc, coords = c("lon_mean", "lat_mean"),
                 crs = st_crs(pa_map), agr = "constant")
 pwc_geom <- st_geometry(pwc)
 
+png("output/PA_centroids_map.png", width = 1440, height = 1440)
 plot(st_geometry(pa_map), axes = TRUE)
 plot(st_geometry(region), col = 'pink', add = TRUE)
 # plot(pa_centroids, pch = 20, col = 'blue', cex = 0.5, add = TRUE)
-plot(b, pch = 20, col = 'red', cex = 0.5, add = TRUE)
-plot(pwc_geom, pch = 20, col = 'purple', cex = 0.5, add = TRUE)
+plot(b, pch = 20, col = '#086fc4', cex = 0.5, add = TRUE)
+plot(pwc_geom, pch = 20, col = '#cf3232', cex = 0.5, add = TRUE)
+dev.off()
 
 
 # Calculate average distance between the unweighted and pop-weighted centroids
@@ -53,7 +55,9 @@ pwc <- pwc[order(pwc$GEOID_ZCTA5_20),]
 
 centroid_dists <- st_distance(a, pwc, by_element = TRUE)
 
-hist(centroid_dists)
+png("output/pa_distance_histogram.png")
+hist(centroid_dists, xlab = "Distances between Weighted and Unweighted Centroids")
+dev.off()
 summary(centroid_dists)
 
 # which ZCTA had the largest difference
