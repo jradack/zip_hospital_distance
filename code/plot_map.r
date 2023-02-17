@@ -5,15 +5,10 @@
 
 library(sf)
 
+source("code/functions.r")
+
 zcta <- st_read("\\\\chop.edu/researchprd/CPHD/5. Data Support/Geographic Data/SHP files/ZCTA/2020/tl_2020_us_zcta520.shp")
 pwc <- read.csv("data/centroids/PA_2020_pwc.csv")
-
-state <- "PA"
-
-in_pa <- function(zcta_id){
-  head_val <- as.numeric(substr(zcta_id,1,3))
-  ifelse(150 <= head_val & head_val <= 196, TRUE, FALSE)
-}
 
 # PA map
 pa_map <- zcta[in_pa(zcta$ZCTA5CE10),]
