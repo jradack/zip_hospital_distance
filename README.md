@@ -5,7 +5,7 @@ Code and data for project calculating the distance and drive times between mater
 
 ## Code
 
-- `centroids_distances.r`: 
+- `centroids_distances.r`: Computes and analyzes the distances between weighted and unweighted ZCTA centroids.
 - `function.r`: Contains all of the R functions used within the other R scripts.
 - `plot_map.r`: Maps ZCTAs and their centroid.
 - `pop_weight_centroid.r`: Computes the population-weighted centroids for 2020 ZCTAs.
