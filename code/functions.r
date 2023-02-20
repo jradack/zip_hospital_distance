@@ -83,8 +83,8 @@ pop_weight_centroid <- function(state, year){
 # Runs the pop_weight_centroid function for a state and year, saving the output
 run_pwc <- function(state, year){
   cb_weighted_centroids <- pop_weight_centroid(state, year)
-  file_name <- paste0("data/centroids/", state, "_", year, "_pwc.csv")
-  write.csv(cb_weighted_centroids, file_name)
+  file_name <- paste0("data/weighted_centroids/", state, "_", year, "_pwc.csv")
+  data.table::fwrite(cb_weighted_centroids, file_name)
 }
 
 # Function determines if a ZCTA belongs to Pennsylvania
@@ -122,3 +122,9 @@ centroid_distances <- function(state){
   centroid_dists <- data.frame(state = state, dists = centroid_dists)
   return(centroid_dists)
 }
+
+# Function sets up the long-form distance matrix between hospital and centroids
+setup_dist_matrix <- function(){
+  
+}
+
