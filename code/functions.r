@@ -124,7 +124,62 @@ centroid_distances <- function(state){
 }
 
 # Function sets up the long-form distance matrix between hospital and centroids
-setup_dist_matrix <- function(){
+distance_matrix <- function(state, centroid = c("weighted", "unweighted")){
+  cat(paste0("Running function for ", state, "...\n"))
   
+  centroid <- match.arg(centroid)
+  
+  cat("Reading in data...\n")
+  # Read in the CRS information
+  crs <- readRDS("data/crs.rds")
+  
+  # Read in the centroids
+  if(centroid == "weighted"){
+    cents <- fread(paste0("data/weighted_centroids/", state, "_2020_pwc.csv"),
+                   colClasses = c("character", rep("numeric", 2)))
+    cents <- st_as_sf(cents, coords = c("lon_mean", "lat_mean"),
+                      crs = crs, agr = "constant")
+  } else if(centroid == "unweighted"){
+    cents <- read_sf("data/unweighted_centroids/zcta_unweighted_centroids.shp")
+    cents <- cents[filter_unweighted_centroids(cents$ZCTA5CE20, state),]
+  }
+  colnames(cents) <- c("zcta_geoid", "geometry")
+  
+  # Read in hospital centroids
+  hospitals <- fread("data/hospital_unique_aha_20221019.csv",
+                     colClasses = c("ID"="character","FIPS_STATE"="character"))
+  hospitals_sf <- st_as_sf(hospitals, coords = c("longitude","latitude"),
+                           crs = crs)
+  hospitals_sf <- hospitals_sf[which(hospitals_sf$state == state),]
+  colnames(hospitals_sf) <- c("hospital_id", "year", "fips_state", "state", "geometry")
+  
+  # Calculate Haversine distance
+  cat("Computing distance matrix...\n")
+  dist_mat <- st_distance(cents, hospitals_sf)
+  rownames(dist_mat) <- cents$zcta_geoid
+  colnames(dist_mat) <- hospitals_sf$hospital_id
+  
+  # Create long distance matrix, merge in columns and clean up
+  cat("Cleaning and returning output...\n")
+  dist_mat_long <- as.data.frame(as.table(dist_mat))
+  colnames(dist_mat_long) <- c("zcta_geoid", "hospital_id", "haversine_dist_m")
+  dist_mat_long[c("zcta_geoid", "hospital_id")] <- sapply(dist_mat_long[c("zcta_geoid", "hospital_id")], as.character)
+  
+  dist_mat_long <- merge(dist_mat_long, cents, by = "zcta_geoid")
+  dist_mat_long[,c("zcta_longitude", "zcta_latitude")] <- st_coordinates(dist_mat_long$geometry)
+  dist_mat_long <- subset(dist_mat_long, select = -c(geometry))
+  
+  dist_mat_long <- merge(dist_mat_long, hospitals_sf, by = "hospital_id")
+  dist_mat_long[,c("hospital_longitude", "hospital_latitude")] <- st_coordinates(dist_mat_long$geometry)
+  dist_mat_long <- subset(dist_mat_long, select = -c(geometry))
+  
+  return(dist_mat_long)
+}
+
+# Run the distance_matrix function for a list of states
+run_dist_mat <- function(state, centroid){
+  dist_mat_long <- distance_matrix(state, centroid)
+  file_name <- paste0("data/distance_matrix/", state, "_", "dist_mat.csv")
+  data.table::fwrite(dist_mat_long, file_name)
 }
 
