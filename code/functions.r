@@ -148,7 +148,7 @@ distance_matrix <- function(state, centroid = c("weighted", "unweighted")){
   colnames(cents) <- c("zcta_geoid", "geometry")
   
   # Read in hospital centroids
-  hospitals <- fread("data/hospital_unique_aha_20221019.csv",
+  hospitals <- fread("data/hospital_unique_aha_20230223.csv",
                      colClasses = c("ID"="character","FIPS_STATE"="character"))
   hospitals_sf <- st_as_sf(hospitals, coords = c("longitude","latitude"),
                            crs = crs)
