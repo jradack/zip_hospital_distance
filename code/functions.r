@@ -41,9 +41,11 @@ weighted_mean <- function(x, w){
 
 # Function for calculating the population-weighted centroid for ZCTA based on census block
 pop_weight_centroid <- function(state, year){
-  state_fips <- c("CA" = "06", "CO" = "08", "FL" = "12", "LA" = "22",
-                  "MA" = "25", "MI" = "26", "NJ" = "34", "NY" = "36",
-                  "PA" = "42", "SC" = "45", "VA" = "51")
+  state_fips <- c("AZ" = "04", "CA" = "06", "CO" = "08", "FL" = "12",
+                  "LA" = "22", "MA" = "25", "MI" = "26", "NV" = "32",
+                  "NJ" = "34", "NY" = "36", "OR" = "41", "PA" = "42",
+                  "SC" = "45", "TN" = "47", "VA" = "51", "WV" = "54")
+  
   state_fips_num <- state_fips[state]
   
   # Setup - drop geometry (since centroid lat/lon are included as columns), convert to 
