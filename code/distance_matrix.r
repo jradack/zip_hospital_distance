@@ -13,6 +13,7 @@ crs <- st_crs(uwc)
 saveRDS(crs, "data/crs.rds")
 
 # Run the distance matrix function
-states <- c("CA", "CO", "FL", "LA", "MA", "MI", "NJ", "NY", "PA", "SC", "VA")
-run_dist_mat(states, "weighted")
-# pa_dist_mat <- distance_matrix("PA", "weighted")
+states <- c("AZ", "CA", "CO", "FL", "LA", "MA", "MI", "NV",
+            "NJ", "NY", "OR", "PA", "SC", "TN", "VA", "WV")
+sapply(states, function(x) run_dist_mat(x, "weighted"))
+# test_dist_mat <- distance_matrix("AZ", "weighted")

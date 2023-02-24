@@ -179,9 +179,10 @@ distance_matrix <- function(state, centroid = c("weighted", "unweighted")){
 }
 
 # Run the distance_matrix function for a list of states
-run_dist_mat <- function(state, centroid){
+run_dist_mat <- function(state, centroid = c("weighted", "unweighted")){
+  centroid = match.arg(centroid)
   dist_mat_long <- distance_matrix(state, centroid)
-  file_name <- paste0("data/distance_matrix/", state, "_", "dist_mat.csv")
+  file_name <- paste0("data/distance_matrix/", state, "_", centroid, "_dist_mat.csv")
   data.table::fwrite(dist_mat_long, file_name)
 }
 
