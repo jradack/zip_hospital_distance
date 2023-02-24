@@ -4,3 +4,6 @@
 .httr-oauth
 .DS_Store
 data/raw/
+data/distance_matrix/
+data/unweighted_centroids/
+data/weighted_centroids/
