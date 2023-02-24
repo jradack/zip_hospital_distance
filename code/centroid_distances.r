@@ -9,7 +9,6 @@ library(units)
 source("code/functions.r")
 
 # Load data
-states <- c("CA", "CO", "FL", "LA", "MA", "MI", "NJ", "NY", "PA", "SC", "VA")
 # centroid_dists_ma <- centroid_distances("MA")
 centroid_dists <- do.call(rbind,lapply(states, centroid_distances))
 

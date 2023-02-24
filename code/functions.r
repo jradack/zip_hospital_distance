@@ -186,3 +186,8 @@ run_dist_mat <- function(state, centroid = c("weighted", "unweighted")){
   data.table::fwrite(dist_mat_long, file_name)
 }
 
+##############################################################
+# Global variable definitions
+##############################################################
+states <- c("AZ", "CA", "CO", "FL", "LA", "MA", "MI", "NV",
+            "NJ", "NY", "OR", "PA", "SC", "TN", "VA", "WV")
