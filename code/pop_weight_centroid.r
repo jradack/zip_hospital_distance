@@ -25,9 +25,11 @@ zcta_cb_cw <- data.table::fread("data/raw/tab20_zcta520_tabblock20_natl.txt",
                                                rep("character",2), rep("numeric",2)),
                                 select = c("GEOID_ZCTA5_20", "GEOID_TABBLOCK_20"))
 
+# Run for all states
 sapply(states, function(x) run_pwc(x, 2020))
-# run_pwc("PA", 2020)
+# Run for an individual state
 # a <- pop_weight_centroid("PA", 2020)
+# run_pwc("PA", 2020)
 
 # Calculate ZCTA unweighted centroids
 zcta_centroids <- st_centroid(zcta)
