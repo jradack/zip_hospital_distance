@@ -23,13 +23,14 @@ To generate the distance matrix output from scratch, run the scripts in the foll
 
 ## Data
 
-### Raw
+### Raw Data Files
 
 The following raw data files are not included in this repository.
 - AHA birth hospital addresses
 - National ZCTA - census block crosswalk from the [Census Bureau](https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_tabblock20_natl.txt).
 - State-specific shapefiles for census block from the [Census Bureau](https://www2.census.gov/geo/tiger/TIGER2020/TABBLOCK20/).
 - Core-Based Statistical Area shapefile from the [Census Bureau](https://www2.census.gov/geo/tiger/TIGER2020/CBSA/).
+- ZIP Code - ZCTA crosswalk from [UDS Mapper](https://udsmapper.org/zip-code-to-zcta-crosswalk/).
 
 ### Distance Matrix Data Dictionary
 
