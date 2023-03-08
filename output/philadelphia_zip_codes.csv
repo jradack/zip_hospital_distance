@@ -1,0 +1,531 @@
+GEOID_ZCTA5_20,ZIP_CODE,PO_NAME,STATE,ZIP_TYPE,zip_join_type
+08001,08001,Alloway,NJ,Zip Code Area,Zip matches ZCTA
+08002,08002,Cherry Hill,NJ,Zip Code Area,Zip matches ZCTA
+08003,08003,Cherry Hill,NJ,Zip Code Area,Zip matches ZCTA
+08004,08004,Atco,NJ,Zip Code Area,Zip matches ZCTA
+08007,08007,Barrington,NJ,Zip Code Area,Zip matches ZCTA
+08009,08009,Berlin,NJ,Zip Code Area,Zip matches ZCTA
+08009,08018,Cedar Brook,NJ,Post Office or large volume customer,Spatial join to ZCTA
+08010,08010,Beverly,NJ,Zip Code Area,Zip matches ZCTA
+08011,08011,Birmingham,NJ,Post Office or large volume customer,Zip matches ZCTA
+08012,08012,Blackwood,NJ,Zip Code Area,Zip matches ZCTA
+08012,08032,Grenloch,NJ,Zip Code Area,Spatial join to ZCTA
+08014,08014,Bridgeport,NJ,Zip Code Area,Zip matches ZCTA
+08015,08015,Browns Mills,NJ,Zip Code Area,Zip matches ZCTA
+08016,08016,Burlington,NJ,Zip Code Area,Zip matches ZCTA
+08019,08019,Chatsworth,NJ,Zip Code Area,Zip matches ZCTA
+08020,08020,Clarksboro,NJ,Zip Code Area,Zip matches ZCTA
+08021,08021,Clementon,NJ,Zip Code Area,Zip matches ZCTA
+08022,08022,Columbus,NJ,Zip Code Area,Zip matches ZCTA
+08023,08023,Deepwater,NJ,Post Office or large volume customer,Zip matches ZCTA
+08026,08026,Gibbsboro,NJ,Zip Code Area,Zip matches ZCTA
+08027,08027,Gibbstown,NJ,Zip Code Area,Zip matches ZCTA
+08028,08028,Glassboro,NJ,Zip Code Area,Zip matches ZCTA
+08029,08029,Glendora,NJ,Zip Code Area,Zip matches ZCTA
+08030,08030,Gloucester City,NJ,Zip Code Area,Zip matches ZCTA
+08031,08031,Bellmawr,NJ,Zip Code Area,Zip matches ZCTA
+08031,08099,Bellmawr,NJ,Post Office or large volume customer,Spatial join to ZCTA
+08033,08033,Haddonfield,NJ,Zip Code Area,Zip matches ZCTA
+08034,08034,Cherry Hill,NJ,Zip Code Area,Zip matches ZCTA
+08035,08035,Haddon Heights,NJ,Zip Code Area,Zip matches ZCTA
+08036,08036,Hainesport,NJ,Zip Code Area,Zip matches ZCTA
+08038,08038,Hancocks Bridge,NJ,Post Office or large volume customer,Zip matches ZCTA
+08039,08039,Harrisonville,NJ,Post Office or large volume customer,Zip matches ZCTA
+08041,08041,Jobstown,NJ,Zip Code Area,Zip matches ZCTA
+08042,08042,Juliustown,NJ,Post Office or large volume customer,Zip matches ZCTA
+08043,08043,Voorhees,NJ,Zip Code Area,Zip matches ZCTA
+08045,08045,Lawnside,NJ,Zip Code Area,Zip matches ZCTA
+08046,08046,Willingboro,NJ,Zip Code Area,Zip matches ZCTA
+08048,08048,Lumberton,NJ,Zip Code Area,Zip matches ZCTA
+08049,08049,Magnolia,NJ,Zip Code Area,Zip matches ZCTA
+08051,08051,Mantua,NJ,Zip Code Area,Zip matches ZCTA
+08052,08052,Maple Shade,NJ,Zip Code Area,Zip matches ZCTA
+08053,08053,Marlton,NJ,Zip Code Area,Zip matches ZCTA
+08054,08054,Mount Laurel,NJ,Zip Code Area,Zip matches ZCTA
+08055,08055,Medford,NJ,Zip Code Area,Zip matches ZCTA
+08056,08056,Mickleton,NJ,Zip Code Area,Zip matches ZCTA
+08057,08057,Moorestown,NJ,Zip Code Area,Zip matches ZCTA
+08059,08059,Mount Ephraim,NJ,Zip Code Area,Zip matches ZCTA
+08060,08060,Mount Holly,NJ,Zip Code Area,Zip matches ZCTA
+08061,08061,Mount Royal,NJ,Zip Code Area,Zip matches ZCTA
+08062,08025,Ewan,NJ,Post Office or large volume customer,Spatial join to ZCTA
+08062,08062,Mullica Hill,NJ,Zip Code Area,Zip matches ZCTA
+08063,08063,National Park,NJ,Zip Code Area,Zip matches ZCTA
+08064,08064,New Lisbon,NJ,Post Office or large volume customer,Zip matches ZCTA
+08065,08065,Palmyra,NJ,Zip Code Area,Zip matches ZCTA
+08066,08066,Paulsboro,NJ,Zip Code Area,Zip matches ZCTA
+08067,08067,Pedricktown,NJ,Zip Code Area,Zip matches ZCTA
+08068,08068,Pemberton,NJ,Zip Code Area,Zip matches ZCTA
+08069,08069,Penns Grove,NJ,Zip Code Area,Zip matches ZCTA
+08070,08070,Pennsville,NJ,Zip Code Area,Zip matches ZCTA
+08071,08071,Pitman,NJ,Zip Code Area,Zip matches ZCTA
+08072,08072,Quinton,NJ,Post Office or large volume customer,Zip matches ZCTA
+08073,08073,Rancocas,NJ,Post Office or large volume customer,Zip matches ZCTA
+08074,08074,Richwood,NJ,Post Office or large volume customer,Zip matches ZCTA
+08075,08075,Riverside,NJ,Zip Code Area,Zip matches ZCTA
+08077,08076,Riverton,NJ,Post Office or large volume customer,Spatial join to ZCTA
+08077,08077,Riverton,NJ,Zip Code Area,Zip matches ZCTA
+08078,08078,Runnemede,NJ,Zip Code Area,Zip matches ZCTA
+08079,08079,Salem,NJ,Zip Code Area,Zip matches ZCTA
+08080,08080,Sewell,NJ,Zip Code Area,Zip matches ZCTA
+08081,08081,Sicklerville,NJ,Zip Code Area,Zip matches ZCTA
+08083,08083,Somerdale,NJ,Zip Code Area,Zip matches ZCTA
+08084,08084,Stratford,NJ,Zip Code Area,Zip matches ZCTA
+08085,08085,Swedesboro,NJ,Zip Code Area,Zip matches ZCTA
+08086,08086,Thorofare,NJ,Zip Code Area,Zip matches ZCTA
+08088,08088,Vincentown,NJ,Zip Code Area,Zip matches ZCTA
+08089,08089,Waterford Works,NJ,Zip Code Area,Zip matches ZCTA
+08090,08090,Wenonah,NJ,Zip Code Area,Zip matches ZCTA
+08091,08091,West Berlin,NJ,Zip Code Area,Zip matches ZCTA
+08093,08093,Westville,NJ,Zip Code Area,Zip matches ZCTA
+08094,08094,Williamstown,NJ,Zip Code Area,Zip matches ZCTA
+08095,08095,Winslow,NJ,Post Office or large volume customer,Zip matches ZCTA
+08096,08096,Woodbury,NJ,Zip Code Area,Zip matches ZCTA
+08097,08097,Woodbury Heights,NJ,Zip Code Area,Zip matches ZCTA
+08098,08098,Woodstown,NJ,Zip Code Area,Zip matches ZCTA
+08102,08101,Camden,NJ,Post Office or large volume customer,Spatial join to ZCTA
+08102,08102,Camden,NJ,Zip Code Area,Zip matches ZCTA
+08103,08103,Camden,NJ,Zip Code Area,Zip matches ZCTA
+08104,08104,Camden,NJ,Zip Code Area,Zip matches ZCTA
+08105,08105,Camden,NJ,Zip Code Area,Zip matches ZCTA
+08106,08106,Audubon,NJ,Zip Code Area,Zip matches ZCTA
+08107,08107,Oaklyn,NJ,Zip Code Area,Zip matches ZCTA
+08108,08108,Collingswood,NJ,Zip Code Area,Zip matches ZCTA
+08109,08109,Merchantville,NJ,Zip Code Area,Zip matches ZCTA
+08110,08110,Pennsauken,NJ,Zip Code Area,Zip matches ZCTA
+08224,08224,New Gretna,NJ,Post Office or large volume customer,Zip matches ZCTA
+08312,08312,Clayton,NJ,Zip Code Area,Zip matches ZCTA
+08318,08318,Elmer,NJ,Zip Code Area,Zip matches ZCTA
+08318,08347,Norma,NJ,Post Office or large volume customer,Spatial join to ZCTA
+08322,08322,Franklinville,NJ,Zip Code Area,Zip matches ZCTA
+08328,08328,Malaga,NJ,Zip Code Area,Zip matches ZCTA
+08343,08343,Monroeville,NJ,Zip Code Area,Zip matches ZCTA
+08344,08344,Newfield,NJ,Zip Code Area,Zip matches ZCTA
+08505,08505,Bordentown,NJ,Zip Code Area,Zip matches ZCTA
+08511,08511,Cookstown,NJ,Zip Code Area,Zip matches ZCTA
+08515,08515,Chesterfield,NJ,Zip Code Area,Zip matches ZCTA
+08518,08518,Florence,NJ,Zip Code Area,Zip matches ZCTA
+08554,08554,Roebling,NJ,Zip Code Area,Zip matches ZCTA
+08562,08562,Wrightstown,NJ,Zip Code Area,Zip matches ZCTA
+08640,08640,Joint Base MDL,NJ,Zip Code Area,Zip matches ZCTA
+08641,08641,Joint Base MDL,NJ,Zip Code Area,Zip matches ZCTA
+18041,18041,East Greenville,PA,Zip Code Area,Zip matches ZCTA
+18054,18054,Green Lane,PA,Zip Code Area,Zip matches ZCTA
+18054,18084,Sumneytown,PA,Post Office or large volume customer,Spatial join to ZCTA
+18070,18070,Palm,PA,Zip Code Area,Zip matches ZCTA
+18073,18073,Pennsburg,PA,Zip Code Area,Zip matches ZCTA
+18074,18074,Perkiomenville,PA,Zip Code Area,Zip matches ZCTA
+18074,19478,Spring Mount,PA,Post Office or large volume customer,Spatial join to ZCTA
+18076,18076,Red Hill,PA,Zip Code Area,Zip matches ZCTA
+18077,18039,Durham,PA,Post Office or large volume customer,Spatial join to ZCTA
+18077,18077,Riegelsville,PA,Zip Code Area,Zip matches ZCTA
+18081,18081,Springtown,PA,Post Office or large volume customer,Zip matches ZCTA
+18901,18901,Doylestown,PA,Zip Code Area,Zip matches ZCTA
+18901,18916,Danboro,PA,Post Office or large volume customer,Spatial join to ZCTA
+18902,18902,Doylestown,PA,Zip Code Area,Zip matches ZCTA
+18902,18928,Holicong,PA,Post Office or large volume customer,Spatial join to ZCTA
+18902,18934,Mechanicsville,PA,Zip Code Area,Spatial join to ZCTA
+18912,18912,Buckingham,PA,Post Office or large volume customer,Zip matches ZCTA
+18913,18913,Carversville,PA,Zip Code Area,Zip matches ZCTA
+18914,18914,Chalfont,PA,Zip Code Area,Zip matches ZCTA
+18915,18915,Colmar,PA,Zip Code Area,Zip matches ZCTA
+18917,18917,Dublin,PA,Zip Code Area,Zip matches ZCTA
+18920,18920,Erwinna,PA,Zip Code Area,Zip matches ZCTA
+18923,18923,Fountainville,PA,Zip Code Area,Zip matches ZCTA
+18925,18922,Forest Grove,PA,Post Office or large volume customer,Spatial join to ZCTA
+18925,18925,Furlong,PA,Zip Code Area,Zip matches ZCTA
+18925,18956,Rushland,PA,Post Office or large volume customer,Spatial join to ZCTA
+18929,18929,Jamison,PA,Zip Code Area,Zip matches ZCTA
+18930,18930,Kintnersville,PA,Zip Code Area,Zip matches ZCTA
+18932,18932,Line Lexington,PA,Zip Code Area,Zip matches ZCTA
+18935,18935,Milford Square,PA,Post Office or large volume customer,Zip matches ZCTA
+18936,18936,Montgomeryville,PA,Zip Code Area,Zip matches ZCTA
+18936,19455,North Wales,PA,Post Office or large volume customer,Spatial join to ZCTA
+18938,18931,Lahaska,PA,Post Office or large volume customer,Spatial join to ZCTA
+18938,18933,Lumberville,PA,Zip Code Area,Spatial join to ZCTA
+18938,18938,New Hope,PA,Zip Code Area,Zip matches ZCTA
+18938,18963,Solebury,PA,Post Office or large volume customer,Spatial join to ZCTA
+18940,18940,Newtown,PA,Zip Code Area,Zip matches ZCTA
+18940,18943,Penns Park,PA,Post Office or large volume customer,Spatial join to ZCTA
+18940,18946,Pineville,PA,Post Office or large volume customer,Spatial join to ZCTA
+18942,18942,Ottsville,PA,Zip Code Area,Zip matches ZCTA
+18942,18953,Revere,PA,Post Office or large volume customer,Spatial join to ZCTA
+18944,18910,Bedminster,PA,Post Office or large volume customer,Spatial join to ZCTA
+18944,18911,Blooming Glen,PA,Post Office or large volume customer,Spatial join to ZCTA
+18944,18927,Hilltown,PA,Zip Code Area,Spatial join to ZCTA
+18944,18944,Perkasie,PA,Zip Code Area,Zip matches ZCTA
+18947,18947,Pipersville,PA,Zip Code Area,Zip matches ZCTA
+18947,18949,Plumsteadville,PA,Post Office or large volume customer,Spatial join to ZCTA
+18950,18950,Point Pleasant,PA,Post Office or large volume customer,Zip matches ZCTA
+18951,18951,Quakertown,PA,Zip Code Area,Zip matches ZCTA
+18951,18968,Spinnerstown,PA,Post Office or large volume customer,Spatial join to ZCTA
+18951,18981,Zionhill,PA,Post Office or large volume customer,Spatial join to ZCTA
+18954,18954,Richboro,PA,Zip Code Area,Zip matches ZCTA
+18955,18955,Richlandtown,PA,Zip Code Area,Zip matches ZCTA
+18960,18960,Sellersville,PA,Zip Code Area,Zip matches ZCTA
+18962,18962,Silverdale,PA,Post Office or large volume customer,Zip matches ZCTA
+18964,18964,Souderton,PA,Zip Code Area,Zip matches ZCTA
+18966,18966,Southampton,PA,Zip Code Area,Zip matches ZCTA
+18969,18918,Earlington,PA,Post Office or large volume customer,Spatial join to ZCTA
+18969,18969,Telford,PA,Zip Code Area,Zip matches ZCTA
+18969,18971,Tylersport,PA,Post Office or large volume customer,Spatial join to ZCTA
+18970,18970,Trumbauersville,PA,Post Office or large volume customer,Zip matches ZCTA
+18972,18921,Ferndale,PA,Post Office or large volume customer,Spatial join to ZCTA
+18972,18972,Upper Black Eddy,PA,Zip Code Area,Zip matches ZCTA
+18974,18974,Warminster,PA,Zip Code Area,Zip matches ZCTA
+18974,18991,Warminster,PA,Post Office or large volume customer,Spatial join to ZCTA
+18976,18976,Warrington,PA,Zip Code Area,Zip matches ZCTA
+18977,18977,Washington Crossing,PA,Zip Code Area,Zip matches ZCTA
+18980,18980,Wycombe,PA,Post Office or large volume customer,Zip matches ZCTA
+19001,19001,Abington,PA,Zip Code Area,Zip matches ZCTA
+19002,19002,Ambler,PA,Zip Code Area,Zip matches ZCTA
+19003,19003,Ardmore,PA,Zip Code Area,Zip matches ZCTA
+19004,19004,Bala Cynwyd,PA,Zip Code Area,Zip matches ZCTA
+19006,19006,Huntingdon Valley,PA,Zip Code Area,Zip matches ZCTA
+19007,19007,Bristol,PA,Zip Code Area,Zip matches ZCTA
+19008,19008,Broomall,PA,Zip Code Area,Zip matches ZCTA
+19009,19009,Bryn Athyn,PA,Zip Code Area,Zip matches ZCTA
+19010,19010,Bryn Mawr,PA,Zip Code Area,Zip matches ZCTA
+19012,19012,Cheltenham,PA,Zip Code Area,Zip matches ZCTA
+19013,19013,Chester,PA,Zip Code Area,Zip matches ZCTA
+19013,19016,Chester,PA,Post Office or large volume customer,Spatial join to ZCTA
+19014,19014,Aston,PA,Zip Code Area,Zip matches ZCTA
+19015,19015,Brookhaven,PA,Zip Code Area,Zip matches ZCTA
+19017,19017,Chester Heights,PA,Post Office or large volume customer,Zip matches ZCTA
+19018,19018,Clifton Heights,PA,Zip Code Area,Zip matches ZCTA
+19020,19020,Bensalem,PA,Zip Code Area,Zip matches ZCTA
+19021,19021,Croydon,PA,Zip Code Area,Zip matches ZCTA
+19022,19022,Crum Lynne,PA,Zip Code Area,Zip matches ZCTA
+19023,19023,Darby,PA,Zip Code Area,Zip matches ZCTA
+19025,19025,Dresher,PA,Zip Code Area,Zip matches ZCTA
+19026,19026,Drexel Hill,PA,Zip Code Area,Zip matches ZCTA
+19027,19027,Elkins Park,PA,Zip Code Area,Zip matches ZCTA
+19029,19029,Essington,PA,Zip Code Area,Zip matches ZCTA
+19030,19030,Fairless Hills,PA,Zip Code Area,Zip matches ZCTA
+19031,19031,Flourtown,PA,Zip Code Area,Zip matches ZCTA
+19032,19032,Folcroft,PA,Zip Code Area,Zip matches ZCTA
+19033,19033,Folsom,PA,Zip Code Area,Zip matches ZCTA
+19034,19034,Fort Washington,PA,Zip Code Area,Zip matches ZCTA
+19035,19035,Gladwyne,PA,Zip Code Area,Zip matches ZCTA
+19036,19036,Glenolden,PA,Zip Code Area,Zip matches ZCTA
+19038,19038,Glenside,PA,Zip Code Area,Zip matches ZCTA
+19040,19040,Hatboro,PA,Zip Code Area,Zip matches ZCTA
+19041,19041,Haverford,PA,Zip Code Area,Zip matches ZCTA
+19043,19043,Holmes,PA,Zip Code Area,Zip matches ZCTA
+19043,19098,Holmes,PA,Post Office or large volume customer,Spatial join to ZCTA
+19044,19044,Horsham,PA,Zip Code Area,Zip matches ZCTA
+19046,19046,Jenkintown,PA,Zip Code Area,Zip matches ZCTA
+19047,19047,Langhorne,PA,Zip Code Area,Zip matches ZCTA
+19050,19050,Lansdowne,PA,Zip Code Area,Zip matches ZCTA
+19053,19048,Fort Washington,PA,Post Office or large volume customer,Spatial join to ZCTA
+19053,19049,Fort Washington,PA,Post Office or large volume customer,Spatial join to ZCTA
+19053,19053,Feasterville Trevose,PA,Zip Code Area,Zip matches ZCTA
+19054,19054,Levittown,PA,Zip Code Area,Zip matches ZCTA
+19055,19055,Levittown,PA,Zip Code Area,Zip matches ZCTA
+19055,19058,Levittown,PA,Post Office or large volume customer,Spatial join to ZCTA
+19056,19056,Levittown,PA,Zip Code Area,Zip matches ZCTA
+19057,19057,Levittown,PA,Zip Code Area,Zip matches ZCTA
+19060,19060,Garnet Valley,PA,Zip Code Area,Zip matches ZCTA
+19061,19061,Marcus Hook,PA,Zip Code Area,Zip matches ZCTA
+19063,19037,Glen Riddle Lima,PA,Post Office or large volume customer,Spatial join to ZCTA
+19063,19052,Lenni,PA,Post Office or large volume customer,Spatial join to ZCTA
+19063,19063,Media,PA,Zip Code Area,Zip matches ZCTA
+19063,19065,Media,PA,Post Office or large volume customer,Spatial join to ZCTA
+19063,19091,Media,PA,Post Office or large volume customer,Spatial join to ZCTA
+19064,19064,Springfield,PA,Zip Code Area,Zip matches ZCTA
+19066,19066,Merion Station,PA,Zip Code Area,Zip matches ZCTA
+19067,19067,Morrisville,PA,Zip Code Area,Zip matches ZCTA
+19070,19070,Morton,PA,Zip Code Area,Zip matches ZCTA
+19072,19072,Narberth,PA,Zip Code Area,Zip matches ZCTA
+19073,19028,Edgemont,PA,Post Office or large volume customer,Spatial join to ZCTA
+19073,19073,Newtown Square,PA,Zip Code Area,Zip matches ZCTA
+19074,19074,Norwood,PA,Zip Code Area,Zip matches ZCTA
+19075,19075,Oreland,PA,Zip Code Area,Zip matches ZCTA
+19076,19076,Prospect Park,PA,Zip Code Area,Zip matches ZCTA
+19078,19078,Ridley Park,PA,Zip Code Area,Zip matches ZCTA
+19079,19079,Sharon Hill,PA,Zip Code Area,Zip matches ZCTA
+19081,19081,Swarthmore,PA,Zip Code Area,Zip matches ZCTA
+19082,19082,Upper Darby,PA,Zip Code Area,Zip matches ZCTA
+19083,19083,Havertown,PA,Zip Code Area,Zip matches ZCTA
+19085,19085,Villanova,PA,Zip Code Area,Zip matches ZCTA
+19086,19086,Wallingford,PA,Zip Code Area,Zip matches ZCTA
+19087,19080,Wayne,PA,Post Office or large volume customer,Spatial join to ZCTA
+19087,19087,Wayne,PA,Zip Code Area,Zip matches ZCTA
+19087,19088,Wayne,PA,Post Office or large volume customer,Spatial join to ZCTA
+19087,19089,Wayne,PA,Post Office or large volume customer,Spatial join to ZCTA
+19087,19397,Southeastern,PA,Post Office or large volume customer,Spatial join to ZCTA
+19087,19398,Southeastern,PA,Post Office or large volume customer,Spatial join to ZCTA
+19087,19399,Southeastern,PA,Post Office or large volume customer,Spatial join to ZCTA
+19090,19090,Willow Grove,PA,Zip Code Area,Zip matches ZCTA
+19094,19094,Woodlyn,PA,Zip Code Area,Zip matches ZCTA
+19095,19095,Wyncote,PA,Zip Code Area,Zip matches ZCTA
+19096,19096,Wynnewood,PA,Zip Code Area,Zip matches ZCTA
+19102,19102,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19102,19187,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19102,19191,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19103,19103,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19103,19173,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19103,19192,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19104,19092,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19104,19093,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19104,19099,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19104,19101,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19104,19104,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19104,19161,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19104,19162,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19104,19170,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19104,19178,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19104,19184,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19104,19190,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19104,19193,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19104,19194,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19104,19195,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19104,19196,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19104,19197,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19106,19106,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19106,19172,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19106,19175,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19106,19177,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19106,19181,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19106,19182,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19106,19183,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19107,19105,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19107,19107,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19107,19110,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19109,19109,Philadelphia,PA,Post Office or large volume customer,Zip matches ZCTA
+19109,19171,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19111,19111,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19112,19112,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19112,19185,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19113,19113,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19114,19114,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19114,19155,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19115,19019,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19115,19115,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19116,19116,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19118,19118,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19119,19119,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19120,19120,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19121,19121,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19122,19122,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19123,19123,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19123,19188,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19124,19124,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19125,19125,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19126,19126,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19127,19127,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19128,19128,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19129,19129,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19130,19108,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19130,19130,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19131,19131,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19132,19132,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19133,19133,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19134,19134,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19135,19135,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19136,19136,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19137,19137,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19138,19138,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19139,19139,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19140,19140,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19140,19160,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19141,19141,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19142,19142,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19143,19143,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19144,19144,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19144,19179,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19145,19145,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19146,19146,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19147,19147,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19148,19148,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19149,19149,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19150,19150,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19151,19151,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19152,19152,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19153,19153,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19153,19176,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19154,19154,Philadelphia,PA,Zip Code Area,Zip matches ZCTA
+19154,19244,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19154,19255,Philadelphia,PA,Post Office or large volume customer,Spatial join to ZCTA
+19301,19301,Paoli,PA,Zip Code Area,Zip matches ZCTA
+19310,19310,Atglen,PA,Zip Code Area,Zip matches ZCTA
+19311,19311,Avondale,PA,Zip Code Area,Zip matches ZCTA
+19312,19312,Berwyn,PA,Zip Code Area,Zip matches ZCTA
+19316,19316,Brandamore,PA,Post Office or large volume customer,Zip matches ZCTA
+19317,19317,Chadds Ford,PA,Zip Code Area,Zip matches ZCTA
+19319,19319,Cheyney,PA,Zip Code Area,Zip matches ZCTA
+19320,19320,Coatesville,PA,Zip Code Area,Zip matches ZCTA
+19320,19376,Wagontown,PA,Post Office or large volume customer,Spatial join to ZCTA
+19330,19330,Cochranville,PA,Zip Code Area,Zip matches ZCTA
+19333,19333,Devon,PA,Zip Code Area,Zip matches ZCTA
+19335,19335,Downingtown,PA,Zip Code Area,Zip matches ZCTA
+19335,19354,Lyndell,PA,Post Office or large volume customer,Spatial join to ZCTA
+19341,19341,Exton,PA,Zip Code Area,Zip matches ZCTA
+19341,19353,Lionville,PA,Post Office or large volume customer,Spatial join to ZCTA
+19342,19039,Gradyville,PA,Post Office or large volume customer,Spatial join to ZCTA
+19342,19331,Concordville,PA,Post Office or large volume customer,Spatial join to ZCTA
+19342,19342,Glen Mills,PA,Zip Code Area,Zip matches ZCTA
+19343,19343,Glenmoore,PA,Zip Code Area,Zip matches ZCTA
+19344,19344,Honey Brook,PA,Zip Code Area,Zip matches ZCTA
+19344,19371,Suplee,PA,Post Office or large volume customer,Spatial join to ZCTA
+19345,19345,Immaculata,PA,Zip Code Area,Zip matches ZCTA
+19348,19348,Kennett Square,PA,Zip Code Area,Zip matches ZCTA
+19348,19357,Mendenhall,PA,Post Office or large volume customer,Spatial join to ZCTA
+19350,19347,Kemblesville,PA,Post Office or large volume customer,Spatial join to ZCTA
+19350,19350,Landenberg,PA,Zip Code Area,Zip matches ZCTA
+19350,19351,Lewisville,PA,Post Office or large volume customer,Spatial join to ZCTA
+19352,19352,Lincoln University,PA,Zip Code Area,Zip matches ZCTA
+19352,19360,New London,PA,Post Office or large volume customer,Spatial join to ZCTA
+19355,19355,Malvern,PA,Zip Code Area,Zip matches ZCTA
+19355,19432,Devault,PA,Post Office or large volume customer,Spatial join to ZCTA
+19355,19493,Valley Forge,PA,Post Office or large volume customer,Spatial join to ZCTA
+19355,19494,Valley Forge,PA,Post Office or large volume customer,Spatial join to ZCTA
+19355,19495,Valley Forge,PA,Post Office or large volume customer,Spatial join to ZCTA
+19355,19496,Valley Forge,PA,Post Office or large volume customer,Spatial join to ZCTA
+19358,19358,Modena,PA,Post Office or large volume customer,Zip matches ZCTA
+19362,19362,Nottingham,PA,Zip Code Area,Zip matches ZCTA
+19363,19363,Oxford,PA,Zip Code Area,Zip matches ZCTA
+19365,19365,Parkesburg,PA,Zip Code Area,Zip matches ZCTA
+19365,19369,Sadsburyville,PA,Post Office or large volume customer,Spatial join to ZCTA
+19367,19367,Pomeroy,PA,Post Office or large volume customer,Zip matches ZCTA
+19372,19372,Thorndale,PA,Zip Code Area,Zip matches ZCTA
+19373,19339,Concordville,PA,Post Office or large volume customer,Spatial join to ZCTA
+19373,19340,Concordville,PA,Post Office or large volume customer,Spatial join to ZCTA
+19373,19373,Thornton,PA,Zip Code Area,Zip matches ZCTA
+19374,19374,Toughkenamon,PA,Zip Code Area,Zip matches ZCTA
+19375,19375,Unionville,PA,Post Office or large volume customer,Zip matches ZCTA
+19380,19380,West Chester,PA,Zip Code Area,Zip matches ZCTA
+19380,19381,West Chester,PA,Post Office or large volume customer,Spatial join to ZCTA
+19382,19366,Pocopson,PA,Post Office or large volume customer,Spatial join to ZCTA
+19382,19382,West Chester,PA,Zip Code Area,Zip matches ZCTA
+19382,19395,Westtown,PA,Post Office or large volume customer,Spatial join to ZCTA
+19383,19383,West Chester,PA,Zip Code Area,Zip matches ZCTA
+19390,19318,Chatham,PA,Post Office or large volume customer,Spatial join to ZCTA
+19390,19346,Kelton,PA,Post Office or large volume customer,Spatial join to ZCTA
+19390,19390,West Grove,PA,Zip Code Area,Zip matches ZCTA
+19401,19401,Norristown,PA,Zip Code Area,Zip matches ZCTA
+19401,19404,Norristown,PA,Post Office or large volume customer,Spatial join to ZCTA
+19403,19403,Norristown,PA,Zip Code Area,Zip matches ZCTA
+19403,19407,Audubon,PA,Post Office or large volume customer,Spatial join to ZCTA
+19403,19408,Eagleville,PA,Post Office or large volume customer,Spatial join to ZCTA
+19403,19409,Fairview Village,PA,Post Office or large volume customer,Spatial join to ZCTA
+19403,19415,Eagleville,PA,Post Office or large volume customer,Spatial join to ZCTA
+19405,19405,Bridgeport,PA,Zip Code Area,Zip matches ZCTA
+19406,19406,King of Prussia,PA,Zip Code Area,Zip matches ZCTA
+19406,19484,Valley Forge,PA,Post Office or large volume customer,Spatial join to ZCTA
+19422,19422,Blue Bell,PA,Zip Code Area,Zip matches ZCTA
+19422,19424,Blue Bell,PA,Post Office or large volume customer,Spatial join to ZCTA
+19425,19425,Chester Springs,PA,Zip Code Area,Zip matches ZCTA
+19425,19480,Uwchland,PA,Post Office or large volume customer,Spatial join to ZCTA
+19426,19426,Collegeville,PA,Zip Code Area,Zip matches ZCTA
+19428,19428,Conshohocken,PA,Zip Code Area,Zip matches ZCTA
+19428,19429,Conshohocken,PA,Post Office or large volume customer,Spatial join to ZCTA
+19435,19435,Frederick,PA,Zip Code Area,Zip matches ZCTA
+19436,19436,Gwynedd,PA,Zip Code Area,Zip matches ZCTA
+19437,19437,Gwynedd Valley,PA,Post Office or large volume customer,Zip matches ZCTA
+19438,18957,Salford,PA,Post Office or large volume customer,Spatial join to ZCTA
+19438,18979,Woxall,PA,Post Office or large volume customer,Spatial join to ZCTA
+19438,19438,Harleysville,PA,Zip Code Area,Zip matches ZCTA
+19438,19441,Harleysville,PA,Post Office or large volume customer,Spatial join to ZCTA
+19438,19450,Lederach,PA,Post Office or large volume customer,Spatial join to ZCTA
+19438,19451,Mainland,PA,Post Office or large volume customer,Spatial join to ZCTA
+19440,19440,Hatfield,PA,Zip Code Area,Zip matches ZCTA
+19442,19442,Kimberton,PA,Post Office or large volume customer,Zip matches ZCTA
+19444,19444,Lafayette Hill,PA,Zip Code Area,Zip matches ZCTA
+19446,19423,Cedars,PA,Post Office or large volume customer,Spatial join to ZCTA
+19446,19443,Kulpsville,PA,Post Office or large volume customer,Spatial join to ZCTA
+19446,19446,Lansdale,PA,Zip Code Area,Zip matches ZCTA
+19446,19486,West Point,PA,Post Office or large volume customer,Spatial join to ZCTA
+19446,19490,Worcester,PA,Post Office or large volume customer,Spatial join to ZCTA
+19453,19453,Mont Clare,PA,Zip Code Area,Zip matches ZCTA
+19454,19454,North Wales,PA,Zip Code Area,Zip matches ZCTA
+19456,19456,Oaks,PA,Zip Code Area,Zip matches ZCTA
+19457,19457,Parker Ford,PA,Post Office or large volume customer,Zip matches ZCTA
+19460,19460,Phoenixville,PA,Zip Code Area,Zip matches ZCTA
+19460,19481,Valley Forge,PA,Post Office or large volume customer,Spatial join to ZCTA
+19460,19482,Valley Forge,PA,Post Office or large volume customer,Spatial join to ZCTA
+19462,19462,Plymouth Meeting,PA,Zip Code Area,Zip matches ZCTA
+19464,19464,Pottstown,PA,Zip Code Area,Zip matches ZCTA
+19465,19465,Pottstown,PA,Zip Code Area,Zip matches ZCTA
+19468,19468,Royersford,PA,Zip Code Area,Zip matches ZCTA
+19472,19472,Sassamansville,PA,Post Office or large volume customer,Zip matches ZCTA
+19473,18958,Salfordville,PA,Post Office or large volume customer,Spatial join to ZCTA
+19473,19430,Creamery,PA,Post Office or large volume customer,Spatial join to ZCTA
+19473,19473,Schwenksville,PA,Zip Code Area,Zip matches ZCTA
+19474,19474,Skippack,PA,Post Office or large volume customer,Zip matches ZCTA
+19475,19421,Birchrunville,PA,Post Office or large volume customer,Spatial join to ZCTA
+19475,19475,Spring City,PA,Zip Code Area,Zip matches ZCTA
+19477,19477,Spring House,PA,Zip Code Area,Zip matches ZCTA
+19492,19492,Zieglerville,PA,Zip Code Area,Zip matches ZCTA
+19520,19470,Saint Peters,PA,Post Office or large volume customer,Spatial join to ZCTA
+19520,19520,Elverson,PA,Zip Code Area,Zip matches ZCTA
+19525,19525,Gilbertsville,PA,Zip Code Area,Zip matches ZCTA
+19701,19701,Bear,DE,Zip Code Area,Zip matches ZCTA
+19701,19708,Kirkwood,DE,Post Office or large volume customer,Spatial join to ZCTA
+19702,19702,Newark,DE,Zip Code Area,Zip matches ZCTA
+19703,19703,Claymont,DE,Zip Code Area,Zip matches ZCTA
+19706,19706,Delaware City,DE,Zip Code Area,Zip matches ZCTA
+19707,19707,Hockessin,DE,Zip Code Area,Zip matches ZCTA
+19709,19709,Middletown,DE,Zip Code Area,Zip matches ZCTA
+19710,19710,Montchanin,DE,Post Office or large volume customer,Zip matches ZCTA
+19711,19711,Newark,DE,Zip Code Area,Zip matches ZCTA
+19711,19714,Newark,DE,Post Office or large volume customer,Spatial join to ZCTA
+19711,19715,Newark,DE,Post Office or large volume customer,Spatial join to ZCTA
+19711,19725,Newark,DE,Post Office or large volume customer,Spatial join to ZCTA
+19713,19712,Newark,DE,Post Office or large volume customer,Spatial join to ZCTA
+19713,19713,Newark,DE,Zip Code Area,Zip matches ZCTA
+19713,19718,Newark,DE,Post Office or large volume customer,Spatial join to ZCTA
+19713,19891,Wilmington,DE,Post Office or large volume customer,Spatial join to ZCTA
+19716,19716,Newark,DE,Zip Code Area,Zip matches ZCTA
+19717,19717,Newark,DE,Zip Code Area,Zip matches ZCTA
+19720,19720,New Castle,DE,Zip Code Area,Zip matches ZCTA
+19720,19721,New Castle,DE,Post Office or large volume customer,Spatial join to ZCTA
+19720,19726,New Castle,DE,Post Office or large volume customer,Spatial join to ZCTA
+19720,19892,Wilmington,DE,Post Office or large volume customer,Spatial join to ZCTA
+19730,19730,Odessa,DE,Zip Code Area,Zip matches ZCTA
+19731,19731,Port Penn,DE,Zip Code Area,Zip matches ZCTA
+19732,19732,Rockland,DE,Zip Code Area,Zip matches ZCTA
+19733,19733,Saint Georges,DE,Zip Code Area,Zip matches ZCTA
+19734,19734,Townsend,DE,Zip Code Area,Zip matches ZCTA
+19735,19735,Winterthur,DE,Post Office or large volume customer,Zip matches ZCTA
+19736,19736,Yorklyn,DE,Zip Code Area,Zip matches ZCTA
+19801,19801,Wilmington,DE,Zip Code Area,Zip matches ZCTA
+19801,19850,Wilmington,DE,Post Office or large volume customer,Spatial join to ZCTA
+19801,19880,Wilmington,DE,Post Office or large volume customer,Spatial join to ZCTA
+19801,19884,Wilmington,DE,Post Office or large volume customer,Spatial join to ZCTA
+19801,19885,Wilmington,DE,Post Office or large volume customer,Spatial join to ZCTA
+19801,19886,Wilmington,DE,Post Office or large volume customer,Spatial join to ZCTA
+19801,19890,Wilmington,DE,Post Office or large volume customer,Spatial join to ZCTA
+19801,19893,Wilmington,DE,Post Office or large volume customer,Spatial join to ZCTA
+19801,19895,Wilmington,DE,Post Office or large volume customer,Spatial join to ZCTA
+19801,19896,Wilmington,DE,Post Office or large volume customer,Spatial join to ZCTA
+19801,19898,Wilmington,DE,Post Office or large volume customer,Spatial join to ZCTA
+19801,19899,Wilmington,DE,Post Office or large volume customer,Spatial join to ZCTA
+19802,19802,Wilmington,DE,Zip Code Area,Zip matches ZCTA
+19803,19803,Wilmington,DE,Zip Code Area,Zip matches ZCTA
+19803,19897,Wilmington,DE,Post Office or large volume customer,Spatial join to ZCTA
+19804,19804,Wilmington,DE,Zip Code Area,Zip matches ZCTA
+19804,19894,Wilmington,DE,Post Office or large volume customer,Spatial join to ZCTA
+19805,19805,Wilmington,DE,Zip Code Area,Zip matches ZCTA
+19806,19806,Wilmington,DE,Zip Code Area,Zip matches ZCTA
+19807,19807,Wilmington,DE,Zip Code Area,Zip matches ZCTA
+19808,19808,Wilmington,DE,Zip Code Area,Zip matches ZCTA
+19809,19809,Wilmington,DE,Zip Code Area,Zip matches ZCTA
+19810,19810,Wilmington,DE,Zip Code Area,Zip matches ZCTA
+21901,21901,North East,MD,Zip Code Area,Zip matches ZCTA
+21902,21902,Perry Point,MD,Post Office or large volume customer,Zip matches ZCTA
+21903,21903,Perryville,MD,Zip Code Area,Zip matches ZCTA
+21904,21904,Port Deposit,MD,Zip Code Area,Zip matches ZCTA
+21911,21911,Rising Sun,MD,Zip Code Area,Zip matches ZCTA
+21912,21912,Warwick,MD,Zip Code Area,Zip matches ZCTA
+21912,21912,Warwick,MD,Zip Code Area,Zip matches ZCTA
+21913,21913,Cecilton,MD,Zip Code Area,Zip matches ZCTA
+21914,21914,Charlestown,MD,Zip Code Area,Zip matches ZCTA
+21915,21915,Chesapeake City,MD,Zip Code Area,Zip matches ZCTA
+21917,21917,Colora,MD,Zip Code Area,Zip matches ZCTA
+21918,21918,Conowingo,MD,Zip Code Area,Zip matches ZCTA
+21919,21919,Earleville,MD,Zip Code Area,Zip matches ZCTA
+21920,21920,Elk Mills,MD,Post Office or large volume customer,Zip matches ZCTA
+21921,21921,Elkton,MD,Zip Code Area,Zip matches ZCTA
+21921,21922,Elkton,MD,Post Office or large volume customer,Spatial join to ZCTA
+21930,21930,Georgetown,MD,Zip Code Area,Zip matches ZCTA
