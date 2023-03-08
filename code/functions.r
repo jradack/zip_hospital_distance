@@ -186,6 +186,59 @@ run_dist_mat <- function(state, centroid = c("weighted", "unweighted")){
   data.table::fwrite(dist_mat_long, file_name)
 }
 
+# Function for selecting a CBSA, with user-input in cases of ambiguity of selection
+get_cbsa <- function(area_name, cbsa_shp){
+  # Get list of matching CBSA names
+  matches <- cbsa_shp[grep(area_name, cbsa_shp$NAME, ignore.case = TRUE),]
+  matches_names <- matches$NAME
+  if (length(matches_names) == 0) {
+    stop("Could not find a matching CBSA.")
+  } else if (length(matches_names) > 1) {
+    # In case of multiple matches, let user choose the desired CBSA
+    cat("Found multiple matches. Please select one:\n")
+    cat(paste0('[', seq(length(matches_names)), '] ', matches_names), sep = "\n")
+    while(TRUE){
+      selection <- suppressWarnings(as.integer(readline("Choice: ")))
+      if(selection %in% seq(length(matches_names))){
+        break
+      } else {
+        cat("Improper input. Please try again.\n")
+      }
+    }
+    return(matches[selection,])
+  } else {
+    return(matches)
+  }
+}
+
+# Finds the population-weighted centroids that belong to a CBSA
+find_zcta_in_cbsa <- function(area_name, cbsa_shp, crs) {
+  # Get location name
+  location <- get_cbsa(area_name, cbsa_shp)
+  
+  # Get the states out of the matched location
+  states <- str_split(location$NAME, ', ', simplify = TRUE)[1,2] |>
+    str_split('-', simplify = TRUE) |>
+    as.vector()
+  
+  # Load population-weighted centroids for the matched states and combine
+  pwc <- lapply(states, 
+                function(x) data.table::fread(paste0("data/weighted_centroids/", x, "_2020_pwc.csv"),
+                                              colClasses = c("character", "numeric", "numeric"))
+  ) |> 
+    data.table::rbindlist() |>
+    st_as_sf(coords = c("lon_mean","lat_mean"), crs = crs)
+  
+  # Compute the intersection between the centroids and CBSA polygon
+  a <- st_intersects(pwc, location)
+  b <- unlist(lapply(a, function(x) length(x) > 0))
+  pwc_matches <- pwc[b,] |>
+    st_drop_geometry()
+  
+  return(pwc_matches)
+}
+
+
 ##############################################################
 # Global variable definitions
 ##############################################################
