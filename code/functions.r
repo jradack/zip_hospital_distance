@@ -161,7 +161,7 @@ distance_matrix <- function(state, centroid = c("weighted", "unweighted")){
   rownames(dist_mat) <- cents$zcta_geoid
   colnames(dist_mat) <- hospitals_sf$hospital_id
   
-  # Create long distance matrix, merge in columns and clean up
+  # Create long-form distance matrix, merge in columns and clean up
   cat("Cleaning and returning output...\n")
   dist_mat_long <- as.data.frame(as.table(dist_mat))
   colnames(dist_mat_long) <- c("zcta_geoid", "hospital_id", "haversine_dist_m")
@@ -174,6 +174,22 @@ distance_matrix <- function(state, centroid = c("weighted", "unweighted")){
   dist_mat_long <- merge(dist_mat_long, hospitals_sf, by = "hospital_id")
   dist_mat_long[,c("hospital_longitude", "hospital_latitude")] <- st_coordinates(dist_mat_long$geometry)
   dist_mat_long <- subset(dist_mat_long, select = -c(geometry))
+  
+  # Get ZIP code labels using ZCTA - ZIP crosswalk
+  zip_zcta_cw <- data.table::fread("data/raw/ZIPCodetoZCTACrosswalk_2010_2021.csv",
+                                   colClasses = c(rep('character',6),'numeric')) |>
+    dplyr::filter(year == 2020) |>
+    dplyr::select(ZIP_CODE, ZCTA) |>
+    dplyr::rename(zip_code = ZIP_CODE)
+  
+  dist_mat_long <- merge(dist_mat_long, zip_zcta_cw, all.x = TRUE,
+                         by.x = "zcta_geoid", by.y = "ZCTA")
+  
+  # Clean up column order
+  ordered_col <- c("state", "fips_state", "year", "hospital_id", "hospital_latitude",
+                   "hospital_longitude", "zcta_geoid", "zip_code", "zcta_latitude",
+                   "zcta_longitude", "haversine_dist_m")
+  dist_mat_long <- dist_mat_long[,ordered_col]
   
   return(dist_mat_long)
 }

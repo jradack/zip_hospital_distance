@@ -34,14 +34,15 @@ The following raw data files are not included in this repository.
 
 ### Distance Matrix Data Dictionary
 
-- `hospital_id`: (chr) AHA ID of the hospital
-- `zcta_geoid`: (chr) 5-digit ZCTA GEOID
-- `haversine_dist_m`: (num) Crow-flies (Haversine) distance between the ZCTA centroid and the hospital address, in meters
-- `zcta_longitude`: (num) ZCTA centroid longitude
-- `zcta_latitude`: (num) ZCTA centroid latitude
-- `year`: (int) Year of the hospital address
-- `fips_state`: (chr) 2-digit state FIPS code
 - `state`: (chr) 2-letter state abbreviation 
-- `hospital_longitude`: (num) Hospital longitude
+- `fips_state`: (chr) 2-digit state FIPS code
+- `year`: (int) Year of the hospital address
+- `hospital_id`: (chr) AHA ID of the hospital
 - `hospital_latitude`: (num) Hospital latitude
+- `hospital_longitude`: (num) Hospital longitude
+- `zcta_geoid`: (chr) 5-digit ZCTA GEOID
+- `zip_code`: (chr) 5-digit ZIP code matched to the ZCTA
+- `zcta_latitude`: (num) ZCTA centroid latitude
+- `zcta_longitude`: (num) ZCTA centroid longitude
+- `haversine_dist_m`: (num) Crow-flies (Haversine) distance between the ZCTA centroid and the hospital address, in meters
 
