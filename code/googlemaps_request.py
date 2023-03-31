@@ -12,6 +12,7 @@ import googlemaps
 import pandas as pd
 from datetime import datetime
 from tqdm import tqdm
+from time import time
 
 # Set working directory
 # os.chdir("Y:/5. Data Support/Geographic Data/ZIP Hospital Travel Time")
@@ -19,6 +20,16 @@ from tqdm import tqdm
 ##################################
 ## FUNCTIONS FOR MAKING REQUEST
 ##################################
+# Timer decorator function
+def timer_func(func):
+    def wrap_func(*args, **kwargs):
+        t1 = time()
+        result = func(*args, **kwargs)
+        t2 = time()
+        print(f'> Function {func.__name__!r} executed in {(t2-t1):.4f}s')
+        return result
+    return wrap_func
+
 # Function for making a single API request
 def makeRequest(gmaps, origin_id, origin_lat, origin_lon, destination_id, destination_lat, destination_lon, mode, dep_time):
     origin = {"latitude" : origin_lat, "longitude" : origin_lon}
@@ -36,6 +47,7 @@ def makeRequest(gmaps, origin_id, origin_lat, origin_lon, destination_id, destin
     else:
         return {'origin_id' : origin_id, 'destination_id' : destination_id, distance_lab : -1, duration_lab : -1}
 
+@timer_func
 def makeRequestIter(gmaps, ds, mode, dep_time):
     # Iterate over rows of the distance matrix, with a progress bar
     results = [
@@ -46,6 +58,7 @@ def makeRequestIter(gmaps, ds, mode, dep_time):
         ]
     return results
 
+@timer_func
 def makeRequestState(gmaps, state_abbrev, dep_time, use_subset = False, subset_size = 10):
     print(f'Processing for {state_abbrev}:')
     # Set file paths
