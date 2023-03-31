@@ -10,7 +10,7 @@
 
 import googlemaps
 import pandas as pd
-from datetime import datetime, timedelta
+from datetime import datetime
 from tqdm import tqdm
 
 # Set working directory
@@ -29,8 +29,8 @@ def makeRequest(gmaps, origin_id, origin_lat, origin_lon, destination_id, destin
                                 units = 'metric',
                                 departure_time = depTime)
     reqResult = req.get('rows')[0].get('elements')[0]
-    distance_lab = "_".join(['distance', mode])
-    duration_lab = "_".join(['duration', mode])
+    distance_lab = "_".join(['distance', mode, 'm'])
+    duration_lab = "_".join(['duration', mode, 'sec'])
     if(reqResult.get('status') == 'OK'):
         return {'origin_id' : origin_id, 'destination_id' : destination_id, distance_lab : reqResult.get('distance').get('value'), duration_lab : reqResult.get('duration').get('value')}
     else:
@@ -46,30 +46,46 @@ def makeRequestIter(gmaps, ds, mode, depTime):
         ]
     return results
 
-def main():
-    # Read in API key
-    with open('data/raw/secret.txt', 'r') as file:
-        api_key = file.read().rstrip()
-    # Create googlemaps object
-    gmaps_obj = googlemaps.Client(key=api_key, requests_kwargs={"verify": False})
+def makeRequestState(gmaps, state_abbrev, depTime, use_subset = False, subset_size = 10):
+    print(f'Processing for {state_abbrev}:')
+    # Set file paths
+    input_csv = f'data/distance_matrix/{state_abbrev}_weighted_dist_mat.csv'
+    output_csv = f'data/distance_matrix/{state_abbrev}_weighted_gmaps_dist_mat.csv'
     # Read in the distance matrix
-    distMat = pd.read_csv('data/distance_matrix/PA_weighted_dist_mat.csv', dtype={'fips_state':'str', 'hospital_id':'str', 'zcta_geoid':'str', 'zip_code':'str'})
-    distMat = distMat.sample(n=10, random_state=100)
-    # Apply any necessary cleaning to the distance matrix (need a new function)
-    # Set the departure time
-    # depTime = datetime.strptime('2022-10-26 10:00AM','%Y-%m-%d %I:%M%p')
-    depTime = datetime.now() + timedelta(minutes = 10) # as a datetime object
-    # depTime = depTime.strftime("%Y-%m-%d %H:%M:%S") # Formats departure time as a string
+    distMat = pd.read_csv(input_csv, dtype={'fips_state':'str', 'hospital_id':'str', 'zcta_geoid':'str', 'zip_code':'str'})
+    # Take a random subset of the data
+    if use_subset:
+        # assign subset_size to be the whole matrix if it is bigger than the number of rows
+        subset_size = len(distMat.index) if len(distMat.index) < subset_size else subset_size
+        distMat = distMat.sample(n=subset_size, random_state=100)
     # Make API request
-    driveTimes = makeRequestIter(gmaps = gmaps_obj, ds = distMat, mode = "driving", depTime = depTime)
-    transitTimes = makeRequestIter(gmaps = gmaps_obj, ds = distMat, mode = "transit", depTime = depTime)
+    print(f'Making API requests for {state_abbrev} drive times and distances...')
+    driveTimes = makeRequestIter(gmaps = gmaps, ds = distMat, mode = "driving", depTime = depTime)
+    print(f'Making API requests for {state_abbrev} transit times and distances...')
+    transitTimes = makeRequestIter(gmaps = gmaps, ds = distMat, mode = "transit", depTime = depTime)
     # Clean up results
+    print(f'Cleaning up and saving results for {state_abbrev}...')
     driveTimes_df = pd.DataFrame.from_records(driveTimes)
     transitTimes_df = pd.DataFrame.from_records(transitTimes)
     distMat_gmaps = distMat.merge(driveTimes_df, how="left", left_on=["zcta_geoid","hospital_id"], right_on=["origin_id", "destination_id"]).merge(transitTimes_df, how="left", left_on=["zcta_geoid","hospital_id"], right_on=["origin_id", "destination_id"])
     distMat_gmaps = distMat_gmaps.drop(["origin_id_x", "destination_id_x", "origin_id_y", "destination_id_y"], axis=1)
     # Save Results
-    distMat_gmaps.to_csv("data/distance_matrix/PA_weighted_gmaps_dist_mat.csv", index=False)
+    distMat_gmaps.to_csv(output_csv, index=False)
+
+def main():
+    # Read in API key
+    secret_file = 'secret_test_account'
+    # secret_file = 'secret'
+    with open(f'data/raw/{secret_file}.txt', 'r') as file:
+        api_key = file.read().rstrip()
+    # Create googlemaps object
+    gmaps_obj = googlemaps.Client(key=api_key, requests_kwargs={"verify": False})
+    # Set the departure time
+    depTime = datetime.strptime('2023-05-17 04:00PM','%Y-%m-%d %I:%M%p')
+    # depTime = datetime.now() + timedelta(minutes = 10)
+    states = ["AZ", "CA", "CO", "FL", "LA", "MA", "MI", "NJ", "NV", "NY", "OR", "PA", "SC", "TN", "VA", "WV"]
+    for state in states:
+        makeRequestState(gmaps_obj, state, depTime, use_subset = True)
 
 
 
