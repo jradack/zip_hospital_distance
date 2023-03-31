@@ -20,14 +20,14 @@ from tqdm import tqdm
 ## FUNCTIONS FOR MAKING REQUEST
 ##################################
 # Function for making a single API request
-def makeRequest(gmaps, origin_id, origin_lat, origin_lon, destination_id, destination_lat, destination_lon, mode, depTime):
+def makeRequest(gmaps, origin_id, origin_lat, origin_lon, destination_id, destination_lat, destination_lon, mode, dep_time):
     origin = {"latitude" : origin_lat, "longitude" : origin_lon}
     destination = {"latitude" : destination_lat, "longitude" : destination_lon}
     req = gmaps.distance_matrix(origins = origin,
                                 destinations = destination,
                                 mode = mode,
                                 units = 'metric',
-                                departure_time = depTime)
+                                departure_time = dep_time)
     reqResult = req.get('rows')[0].get('elements')[0]
     distance_lab = "_".join(['distance', mode, 'm'])
     duration_lab = "_".join(['duration', mode, 'sec'])
@@ -36,17 +36,17 @@ def makeRequest(gmaps, origin_id, origin_lat, origin_lon, destination_id, destin
     else:
         return {'origin_id' : origin_id, 'destination_id' : destination_id, distance_lab : -1, duration_lab : -1}
 
-def makeRequestIter(gmaps, ds, mode, depTime):
+def makeRequestIter(gmaps, ds, mode, dep_time):
     # Iterate over rows of the distance matrix, with a progress bar
     results = [
-        makeRequest(gmaps, zcta_geoid, zcta_latitude, zcta_longitude, hospital_id, hospital_latitude, hospital_longitude, mode, depTime) 
+        makeRequest(gmaps, zcta_geoid, zcta_latitude, zcta_longitude, hospital_id, hospital_latitude, hospital_longitude, mode, dep_time) 
         for zcta_geoid, zcta_latitude, zcta_longitude, hospital_id, hospital_latitude, hospital_longitude 
         in tqdm(zip(ds["zcta_geoid"], ds["zcta_latitude"], ds["zcta_longitude"], ds["hospital_id"], ds["hospital_latitude"], ds["hospital_longitude"]),
         total = len(ds.index))
         ]
     return results
 
-def makeRequestState(gmaps, state_abbrev, depTime, use_subset = False, subset_size = 10):
+def makeRequestState(gmaps, state_abbrev, dep_time, use_subset = False, subset_size = 10):
     print(f'Processing for {state_abbrev}:')
     # Set file paths
     input_csv = f'data/distance_matrix/{state_abbrev}_weighted_dist_mat.csv'
@@ -60,9 +60,9 @@ def makeRequestState(gmaps, state_abbrev, depTime, use_subset = False, subset_si
         distMat = distMat.sample(n=subset_size, random_state=100)
     # Make API request
     print(f'Making API requests for {state_abbrev} drive times and distances...')
-    driveTimes = makeRequestIter(gmaps = gmaps, ds = distMat, mode = "driving", depTime = depTime)
+    driveTimes = makeRequestIter(gmaps = gmaps, ds = distMat, mode = "driving", dep_time = dep_time)
     print(f'Making API requests for {state_abbrev} transit times and distances...')
-    transitTimes = makeRequestIter(gmaps = gmaps, ds = distMat, mode = "transit", depTime = depTime)
+    transitTimes = makeRequestIter(gmaps = gmaps, ds = distMat, mode = "transit", dep_time = dep_time)
     # Clean up results
     print(f'Cleaning up and saving results for {state_abbrev}...')
     driveTimes_df = pd.DataFrame.from_records(driveTimes)
@@ -81,11 +81,11 @@ def main():
     # Create googlemaps object
     gmaps_obj = googlemaps.Client(key=api_key, requests_kwargs={"verify": False})
     # Set the departure time
-    depTime = datetime.strptime('2023-05-17 04:00PM','%Y-%m-%d %I:%M%p')
-    # depTime = datetime.now() + timedelta(minutes = 10)
+    dep_time = datetime.strptime('2023-05-17 04:00PM','%Y-%m-%d %I:%M%p')
+    # dep_time = datetime.now() + timedelta(minutes = 10)
     states = ["AZ", "CA", "CO", "FL", "LA", "MA", "MI", "NJ", "NV", "NY", "OR", "PA", "SC", "TN", "VA", "WV"]
     for state in states:
-        makeRequestState(gmaps_obj, state, depTime, use_subset = True)
+        makeRequestState(gmaps_obj, state, dep_time, use_subset = True)
 
 
 
