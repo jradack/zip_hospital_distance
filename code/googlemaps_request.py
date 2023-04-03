@@ -31,7 +31,7 @@ def timer_func(func):
     return wrap_func
 
 # Function for making a single API request
-def makeRequest(gmaps, origin_id, origin_lat, origin_lon, destination_id, destination_lat, destination_lon, mode, dep_time):
+def makeRequest(gmaps, zcta_geoid, zip_code, hospital_id, origin_lat, origin_lon, destination_lat, destination_lon, mode, dep_time):
     origin = {"latitude" : origin_lat, "longitude" : origin_lon}
     destination = {"latitude" : destination_lat, "longitude" : destination_lon}
     req = gmaps.distance_matrix(origins = origin,
@@ -43,17 +43,17 @@ def makeRequest(gmaps, origin_id, origin_lat, origin_lon, destination_id, destin
     distance_lab = "_".join(['distance', mode, 'm'])
     duration_lab = "_".join(['duration', mode, 'sec'])
     if(reqResult.get('status') == 'OK'):
-        return {'origin_id' : origin_id, 'destination_id' : destination_id, distance_lab : reqResult.get('distance').get('value'), duration_lab : reqResult.get('duration').get('value')}
+        return {'zcta_geoid' : zcta_geoid, 'zip_code' : zip_code, 'hospital_id' : hospital_id, distance_lab : reqResult.get('distance').get('value'), duration_lab : reqResult.get('duration').get('value')}
     else:
-        return {'origin_id' : origin_id, 'destination_id' : destination_id, distance_lab : -1, duration_lab : -1}
+        return {'zcta_geoid' : zcta_geoid, 'zip_code' : zip_code, 'hospital_id' : hospital_id, distance_lab : -1, duration_lab : -1}
 
 @timer_func
 def makeRequestIter(gmaps, ds, mode, dep_time):
     # Iterate over rows of the distance matrix, with a progress bar
     results = [
-        makeRequest(gmaps, zcta_geoid, zcta_latitude, zcta_longitude, hospital_id, hospital_latitude, hospital_longitude, mode, dep_time) 
-        for zcta_geoid, zcta_latitude, zcta_longitude, hospital_id, hospital_latitude, hospital_longitude 
-        in tqdm(zip(ds["zcta_geoid"], ds["zcta_latitude"], ds["zcta_longitude"], ds["hospital_id"], ds["hospital_latitude"], ds["hospital_longitude"]),
+        makeRequest(gmaps, zcta_geoid, zip_code, hospital_id, zcta_latitude, zcta_longitude, hospital_latitude, hospital_longitude, mode, dep_time) 
+        for zcta_geoid, zip_code, hospital_id, zcta_latitude, zcta_longitude, hospital_latitude, hospital_longitude 
+        in tqdm(zip(ds["zcta_geoid"], ds["zip_code"], ds["hospital_id"], ds["zcta_latitude"], ds["zcta_longitude"], ds["hospital_latitude"], ds["hospital_longitude"]),
         total = len(ds.index))
         ]
     return results
@@ -80,8 +80,7 @@ def makeRequestState(gmaps, state_abbrev, dep_time, use_subset = False, subset_s
     print(f'Cleaning up and saving results for {state_abbrev}...')
     driveTimes_df = pd.DataFrame.from_records(driveTimes)
     transitTimes_df = pd.DataFrame.from_records(transitTimes)
-    distMat_gmaps = distMat.merge(driveTimes_df, how="left", left_on=["zcta_geoid","hospital_id"], right_on=["origin_id", "destination_id"]).merge(transitTimes_df, how="left", left_on=["zcta_geoid","hospital_id"], right_on=["origin_id", "destination_id"])
-    distMat_gmaps = distMat_gmaps.drop(["origin_id_x", "destination_id_x", "origin_id_y", "destination_id_y"], axis=1)
+    distMat_gmaps = distMat.merge(driveTimes_df, how="left", on=["zcta_geoid", "zip_code", "hospital_id"]).merge(transitTimes_df, how="left", on=["zcta_geoid", "zip_code", "hospital_id"])
     # Save Results
     distMat_gmaps.to_csv(output_csv, index=False)
 
