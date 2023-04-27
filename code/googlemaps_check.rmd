@@ -1,0 +1,63 @@
+---
+title: "Google Maps Data Check"
+output: html_document
+date: "Last compiled on `r format(Sys.time(), '%B %d %Y')`"
+knit: (function(inputFile, encoding) {
+  root_dir <- rprojroot::find_rstudio_root_file();
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = paste0(root_dir, "/output"), knit_root_dir = root_dir) })
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+
+source('code/functions.r')
+```
+
+### Load data
+```{r load data}
+gmaps_list <- lapply(states, function(x) data.table::fread(
+  paste0("data/distance_matrix_gmaps/", x, "_weighted_gmaps_dist_mat.csv"),
+  colClasses = c(rep("character", 2), "numeric", "character", rep("numeric", 2),
+                 rep("character", 2), rep("numeric", 7))
+))
+names(gmaps_list) <- states
+```
+
+### Validity by travel mode
+This table shows the number and proportion of valid and invalid responses for the hospital - ZIP code pairs, separated by state.
+Proportions sum to 1 within state and travel mode.
+```{r, results = 'asis'}
+gmaps_list |>
+  map(~ select(., distance_driving_m, distance_transit_m)) |>
+  map(~ pivot_longer(.,
+    cols = c(distance_driving_m, distance_transit_m),
+    names_pattern = "distance_(.*)",
+    names_to = "travel_mode",
+    values_to = "distances"
+  )) |> 
+  bind_rows(.id = "state") |>
+  mutate(
+    validity = if_else(distances == -1, "Invalid", "Valid"),
+    travel_mode = gsub("_m", "", travel_mode)
+  ) |>
+  count(state, travel_mode, validity) |>
+  group_by(state, travel_mode) |>
+  mutate(proportion = prop.table(n)) |>
+  knitr::kable(digits=4)
+```
+
+### Number of ZIP codes that have no valid google response
+This table shows the number and proportion of hospital - ZIP code pairs that have a valid drive or transit distance.
+Proportions sum to 1 within state.
+```{r, results = 'asis'}
+gmaps_list |>
+  bind_rows(.id = "state") |>
+  mutate(validity = if_else(if_all(.cols = c(distance_driving_m, distance_transit_m), ~ . == -1), "No Valid Distance", "Has Valid Distance")) |>
+  count(state, validity) |>
+  group_by(state) |>
+  mutate(proportion = prop.table(n)) |>
+  knitr::kable(digits=4)
+```
+
