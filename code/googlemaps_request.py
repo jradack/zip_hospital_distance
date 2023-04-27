@@ -86,8 +86,8 @@ def makeRequestState(gmaps, state_abbrev, dep_time, use_subset = False, subset_s
 
 def main():
     # Read in API key
-    secret_file = 'secret_test_account'
-    # secret_file = 'secret'
+    secret_file = 'secret'
+    # secret_file = 'secret_test_account'
     with open(f'data/raw/{secret_file}.txt', 'r') as file:
         api_key = file.read().rstrip()
     # Create googlemaps object
@@ -95,9 +95,12 @@ def main():
     # Set the departure time
     dep_time = datetime.strptime('2023-05-17 04:00PM','%Y-%m-%d %I:%M%p')
     # dep_time = datetime.now() + timedelta(minutes = 10)
-    states = ["AZ", "CA", "CO", "FL", "LA", "MA", "MI", "NJ", "NV", "NY", "OR", "PA", "SC", "TN", "VA", "WV"]
+    # states = ["AZ", "CA", "CO", "FL", "LA", "MA", "MI", "NJ", "NV", "NY", "OR", "PA", "SC", "TN", "VA", "WV"]
+    states = ["CO", "FL", "LA", "MA", "MI", "NJ", "NY", "OR", "PA", "SC", "TN", "VA", "WV"]
+    # states = ["ABC"]
     for state in states:
-        makeRequestState(gmaps_obj, state, dep_time, use_subset = True)
+        makeRequestState(gmaps_obj, state, dep_time)
+        # makeRequestState(gmaps_obj, state, dep_time, use_subset = True, subset_size=100)
 
 
 
