@@ -176,18 +176,21 @@ distance_matrix <- function(state, centroid = c("weighted", "unweighted")){
   dist_mat_long <- subset(dist_mat_long, select = -c(geometry))
   
   # Get ZIP code labels using ZCTA - ZIP crosswalk
-  zip_zcta_cw <- data.table::fread("data/raw/ZIPCodetoZCTACrosswalk_2010_2021.csv",
-                                   colClasses = c(rep('character',6),'numeric')) |>
-    dplyr::filter(year == 2020) |>
-    dplyr::select(ZIP_CODE, ZCTA) |>
-    dplyr::rename(zip_code = ZIP_CODE)
+  # zip_zcta_cw <- data.table::fread("data/raw/ZIPCodetoZCTACrosswalk_2010_2021.csv",
+  #                                  colClasses = c(rep('character',6),'numeric')) |>
+  #   dplyr::filter(year == 2020) |>
+  #   dplyr::select(ZIP_CODE, ZCTA) |>
+  #   dplyr::rename(zip_code = ZIP_CODE)
   
-  dist_mat_long <- merge(dist_mat_long, zip_zcta_cw, all.x = TRUE,
-                         by.x = "zcta_geoid", by.y = "ZCTA")
+  # dist_mat_long <- merge(dist_mat_long, zip_zcta_cw, all.x = TRUE,
+  #                        by.x = "zcta_geoid", by.y = "ZCTA")
   
   # Clean up column order
+  # ordered_col <- c("state", "fips_state", "year", "hospital_id", "hospital_latitude",
+  #                  "hospital_longitude", "zcta_geoid", "zip_code", "zcta_latitude",
+  #                  "zcta_longitude", "haversine_dist_m")
   ordered_col <- c("state", "fips_state", "year", "hospital_id", "hospital_latitude",
-                   "hospital_longitude", "zcta_geoid", "zip_code", "zcta_latitude",
+                   "hospital_longitude", "zcta_geoid", "zcta_latitude",
                    "zcta_longitude", "haversine_dist_m")
   dist_mat_long <- dist_mat_long[,ordered_col]
   

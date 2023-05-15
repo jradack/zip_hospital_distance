@@ -34,6 +34,11 @@ The following raw data files are not included in this repository.
 
 ### Distance Matrix Data Dictionary
 
+There are two versions of the distance matrix file for each state - one without the Google maps columns, and one with the Google maps columns.
+The same hospital - ZCTA pair may be represented multiple times in a file since multiple ZIP codes mapped to the same ZCTA in the crosswalk.
+If the value for any of the Google maps columns is -1, this means that Google maps could not find a valid route between the two requested locations.
+
+#### Overall columns
 - `state`: (chr) 2-letter state abbreviation 
 - `fips_state`: (chr) 2-digit state FIPS code
 - `year`: (int) Year of the hospital address
@@ -45,4 +50,10 @@ The following raw data files are not included in this repository.
 - `zcta_latitude`: (num) ZCTA centroid latitude
 - `zcta_longitude`: (num) ZCTA centroid longitude
 - `haversine_dist_m`: (num) Crow-flies (Haversine) distance between the ZCTA centroid and the hospital address, in meters
+
+#### Google maps columns
+- `distance_driving_m` : (num) Google maps driving distance in meters
+- `duration_driving_sec` : (num) Google maps driving time in seconds
+- `distance_transit_m` : (num) Google maps transit distance in meters
+- `duration_transit_sec` : (num) Google maps transit time in seconds
 
