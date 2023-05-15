@@ -33,7 +33,7 @@ def timer_func(func):
     return wrap_func
 
 # Function for making a single API request
-def makeRequest(gmaps, zcta_geoid, zip_code, hospital_id, origin_lat, origin_lon, destination_lat, destination_lon, mode, dep_time):
+def makeRequest(gmaps, zcta_geoid, hospital_id, origin_lat, origin_lon, destination_lat, destination_lon, mode, dep_time):
     origin = {"latitude" : origin_lat, "longitude" : origin_lon}
     destination = {"latitude" : destination_lat, "longitude" : destination_lon}
     req = gmaps.distance_matrix(origins = origin,
@@ -45,9 +45,9 @@ def makeRequest(gmaps, zcta_geoid, zip_code, hospital_id, origin_lat, origin_lon
     distance_lab = "_".join(['distance', mode, 'm'])
     duration_lab = "_".join(['duration', mode, 'sec'])
     if(reqResult.get('status') == 'OK'):
-        return {'zcta_geoid' : zcta_geoid, 'zip_code' : zip_code, 'hospital_id' : hospital_id, distance_lab : reqResult.get('distance').get('value'), duration_lab : reqResult.get('duration').get('value')}
+        return {'zcta_geoid' : zcta_geoid, 'hospital_id' : hospital_id, distance_lab : reqResult.get('distance').get('value'), duration_lab : reqResult.get('duration').get('value')}
     else:
-        return {'zcta_geoid' : zcta_geoid, 'zip_code' : zip_code, 'hospital_id' : hospital_id, distance_lab : -1, duration_lab : -1}
+        return {'zcta_geoid' : zcta_geoid, 'hospital_id' : hospital_id, distance_lab : -1, duration_lab : -1}
 
 @timer_func
 def makeRequestState(gmaps, state_abbrev, dep_time, use_subset = False, subset_size = 10):
@@ -60,7 +60,7 @@ def makeRequestState(gmaps, state_abbrev, dep_time, use_subset = False, subset_s
     if not output_file.is_file():
         shutil.copyfile(input_csv, output_csv)
     # Read in the distance matrix
-    distMat = pd.read_csv(output_csv, dtype={'fips_state':'str', 'hospital_id':'str', 'zcta_geoid':'str', 'zip_code':'str'})
+    distMat = pd.read_csv(output_csv, dtype={'fips_state':'str', 'hospital_id':'str', 'zcta_geoid':'str'})
     # Take a random subset of the data
     if use_subset:
         # assign subset_size to be the whole matrix if it is bigger than the number of rows
@@ -78,8 +78,8 @@ def makeRequestState(gmaps, state_abbrev, dep_time, use_subset = False, subset_s
             # if distMat["distance_driving_m"][ind] != None:
             #     next
             # Make API Requests
-            result_driving = makeRequest(gmaps, distMat['zcta_geoid'][ind], distMat["zip_code"][ind], distMat["hospital_id"][ind], distMat["zcta_latitude"][ind], distMat["zcta_longitude"][ind], distMat["hospital_latitude"][ind], distMat["hospital_longitude"][ind], "driving", dep_time)
-            result_transit = makeRequest(gmaps, distMat['zcta_geoid'][ind], distMat["zip_code"][ind], distMat["hospital_id"][ind], distMat["zcta_latitude"][ind], distMat["zcta_longitude"][ind], distMat["hospital_latitude"][ind], distMat["hospital_longitude"][ind], "transit", dep_time)
+            result_driving = makeRequest(gmaps, distMat['zcta_geoid'][ind], distMat["hospital_id"][ind], distMat["zcta_latitude"][ind], distMat["zcta_longitude"][ind], distMat["hospital_latitude"][ind], distMat["hospital_longitude"][ind], "driving", dep_time)
+            result_transit = makeRequest(gmaps, distMat['zcta_geoid'][ind], distMat["hospital_id"][ind], distMat["zcta_latitude"][ind], distMat["zcta_longitude"][ind], distMat["hospital_latitude"][ind], distMat["hospital_longitude"][ind], "transit", dep_time)
             # Save results
             distMat.at[ind, "distance_driving_m"] = result_driving["distance_driving_m"]
             distMat.at[ind, "duration_driving_sec"] = result_driving["duration_driving_sec"]
@@ -94,8 +94,8 @@ def makeRequestState(gmaps, state_abbrev, dep_time, use_subset = False, subset_s
 def main():
     # Read in API key and set up states list
     # secret_file, states = ['secret_chop', ["OR", "SC", "WV", "CO", "MA", "NJ", "TN", "VA", "MI", "LA", "FL", "NY", "PA", "CA"]]
-    secret_file, states = ['secret_stanford', ["CA"]]
-    # secret_file, states = ['secret_test_account', ["ABC"]]
+    # secret_file, states = ['secret_stanford', ["CA"]]
+    secret_file, states = ['secret_test_account', ["ABC"]]
     with open(f'data/raw/{secret_file}.txt', 'r') as file:
         api_key = file.read().rstrip()
     # Create googlemaps object
