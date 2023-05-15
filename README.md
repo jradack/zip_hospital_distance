@@ -9,6 +9,7 @@ Code and data for project calculating the distance and drive times between mater
 - `distance_matrix.r`: Computes the long-form (Haversine) distance matrix between ZCTA centroids and hosptial addresses. The output dataset is fed to the script for querying the googlemaps API.
 - `function.r`: Contains all of the R functions used within the other R scripts.
 - `googlemaps_request.py`: Makes the API calls for driving/transit distance and time between ZCTA centroids and hospital addresses.
+- `merge_zip_codes.r`: Merges ZIP code information to the distance matrices with google maps data.
 - `plot_map.r`: Maps ZCTAs and their centroid.
 - `pop_weight_centroid.r`: Computes the population-weighted centroids for 2020 ZCTAs.
 - `state_query_count.r`: Counts the number of queries would be needed at varying levels of geographic complexity.
@@ -20,6 +21,7 @@ To generate the distance matrix output from scratch, run the scripts in the foll
 1. `pop_weight_centroid.r`
 2. `distance_matrix.r`
 3. `googlemaps_request.py`
+4. `merge_zip_codes.r`
 
 ## Data
 

@@ -205,6 +205,40 @@ run_dist_mat <- function(state, centroid = c("weighted", "unweighted")){
   data.table::fwrite(dist_mat_long, file_name)
 }
 
+# Function for merging ZIP code into the distance matrix with google maps data
+merge_zip <- function(state){
+  dist_mat_long <- data.table::fread(
+    paste0("data/distance_matrix_gmaps/", state, '_weighted_gmaps_dist_mat.csv'),
+    colClasses = list(character=c("state","fips_state","hospital_id","zcta_geoid"))
+  )
+  
+  # Get ZIP code labels using ZCTA - ZIP crosswalk
+  zip_zcta_cw <- data.table::fread("data/raw/ZIPCodetoZCTACrosswalk_2010_2021.csv",
+                                   colClasses = c(rep('character',6),'numeric')) |>
+    dplyr::filter(year == 2020) |>
+    dplyr::select(ZIP_CODE, ZCTA) |>
+    dplyr::rename(zip_code = ZIP_CODE)
+  
+  dist_mat_long <- merge(dist_mat_long, zip_zcta_cw, all.x = TRUE,
+                         by.x = "zcta_geoid", by.y = "ZCTA")
+  dist_mat_long <- as.data.frame(dist_mat_long)
+  
+  ordered_col <- c("state", "fips_state", "year", "hospital_id", "hospital_latitude",
+                   "hospital_longitude", "zcta_geoid", "zip_code", "zcta_latitude",
+                   "zcta_longitude", "haversine_dist_m", "distance_driving_m",
+                   "duration_driving_sec", "distance_transit_m", "duration_transit_sec")
+  dist_mat_long <- dist_mat_long[,ordered_col]
+  return(dist_mat_long)
+}
+
+# Run the merge_zip function for a list of states
+run_dist_mat <- function(state){
+  dist_mat_long <- merge_zip(state, centroid)
+  file_name <- paste0("data/distance_matrix_gmaps/", state, "_ZIP_weighted_gmaps_dist_mat.csv")
+  data.table::fwrite(dist_mat_long, file_name)
+}
+
+
 # Function for selecting a CBSA, with user-input in cases of ambiguity of selection
 get_cbsa <- function(area_name, cbsa_shp){
   # Get list of matching CBSA names
