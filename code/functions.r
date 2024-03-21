@@ -2,15 +2,23 @@
 # Set of functions for the Hospital - ZIP distance project
 ##############################################################
 
-# Functions for processing latitude/longitude
-# Converts string latitude-longitude into numeric
+#' Functions for processing latitude/longitude
+#' 
+#' Converts string latitude-longitude into numeric
+#' @param val String of latitude or longitude
+#' @returns Numeric version of latitude or longitude
 get_lat_lon <- function(val){
   pos_neg <- ifelse(substr(val,1,1) == "-", -1, 1)
   val_num <- as.numeric(regmatches(val,gregexpr("[[:digit:]]+\\.*[[:digit:]]*",val)))
   return(pos_neg * val_num)
 }
 
-# Convert latitude and longitude to Cartesian xyz coordinates
+#' Convert latitude and longitude to Cartesian xyz coordinates
+#' 
+#' @param lat Numeric value of latitude
+#' @param lon Numeric value of longitude
+#' @param r Radius of the sphere. The default is Earth's radius in kilometers.
+#' @returns A data.frame of Cartesian coordinates (x, y, z) from the center of the sphere. Units will be relative to the radius used.
 coord_to_cartesian <- function(lat, lon, r = 6371){
   lat <- lat * pi / 180
   lon <- lon * pi / 180
@@ -21,7 +29,13 @@ coord_to_cartesian <- function(lat, lon, r = 6371){
   return(data.frame(x = x, y = y, z = z))
 }
 
-# Convert Cartesian coordinates to latitude/longitude
+#' Convert Cartesian coordinates to latitude/longitude
+#' 
+#' @param x X-coordinate
+#' @param y Y-coordinate
+#' @param z Z-coordinate
+#' @param r Radius of the sphere. The default is Earth's radius in kilometers and should match the Cartesian coordinate units.
+#' @returns A data.frame of latitude and longitude (lat, lon) of the point.
 cartesian_to_coord <- function(x, y, z, r = 6371){
   lat <- asin(z/r)
   lon <- atan2(y,x)
@@ -32,6 +46,12 @@ cartesian_to_coord <- function(x, y, z, r = 6371){
   return(data.frame(lat = lat, lon = lon))
 }
 
+#' Compute weighted mean
+#' 
+#' Computes the weighted mean of a vector, defaulting to standard arithmetic mean if weights sum to 0.
+#' @param x Vector that will be averaged.
+#' @param w Vector of weights.
+#' @returns A number representing the weighted mean of x.
 weighted_mean <- function(x, w){
   if(sum(w) == 0){
     return(mean(x, na.rm = TRUE))
@@ -39,7 +59,11 @@ weighted_mean <- function(x, w){
   weighted.mean(x, w, na.rm = TRUE)
 }
 
-# Function for calculating the population-weighted centroid for ZCTA based on census block
+#' Function for calculating the population-weighted centroid for ZCTA based on census block
+#' 
+#' @param state A state's postal abbreviation.
+#' @param year Year of the census block data.
+#' @returns A data.frame containing the centroid for a ZCTA weighted by census block population.
 pop_weight_centroid <- function(state, year){
   state_fips <- c("AZ" = "04", "CA" = "06", "CO" = "08", "DE" = "10", "FL" = "12",
                   "LA" = "22", "MD" = "24", "MA" = "25", "MI" = "26", "NV" = "32",
@@ -82,20 +106,34 @@ pop_weight_centroid <- function(state, year){
   return(cb_weighted_centroids[,c("GEOID_ZCTA5_20", "lat_mean", "lon_mean")])
 }
 
-# Runs the pop_weight_centroid function for a state and year, saving the output
+#' Run `pop_weight_centroid` function
+#' 
+#' Wrapper function for running the `pop_weight_centroid` function for a state and year, saving the output
+#' @param state A state's postal abbreviation.
+#' @param year Year
 run_pwc <- function(state, year){
   cb_weighted_centroids <- pop_weight_centroid(state, year)
   file_name <- paste0("data/weighted_centroids/", state, "_", year, "_pwc.csv")
   data.table::fwrite(cb_weighted_centroids, file_name)
 }
 
-# Function determines if a ZCTA belongs to Pennsylvania
+#' Check if ZCTA is in PA
+#' 
+#' Function determines if a ZCTA belongs to Pennsylvania
+#' @param zcta_id Character string of a ZCTA
+#' @returns Boolean value indicating whether a ZCTA belongs to PA (i.e. if first three digits are between 150 and 196)
 in_pa <- function(zcta_id){
   head_val <- as.numeric(substr(zcta_id,1,3))
   ifelse(150 <= head_val & head_val <= 196, TRUE, FALSE)
 }
 
-# Filters a list of ZCTA GEOIDs to the state whose abbreviation is passed
+#' Filter centroids (unweighted)
+#' 
+#' Filters a list of ZCTA GEOIDs to the state whose abbreviation is passed. Checks dataframe containing rows of ZIP code
+#' prefixes and which state it corresponds to.
+#' @param zcta_id Character string of a ZCTA ID
+#' @param state_abb A state's postal abbreviation.
+#' @returns Boolean value indicating whether ZCTA belongs to a state or not
 filter_unweighted_centroids <- function(zcta_id, state_abb){
   zip_code_prefixes <- data.table::fread("data/zip_code_prefix.csv",
                                          colClasses = c(rep("character",4), rep("numeric",3)))
@@ -104,7 +142,11 @@ filter_unweighted_centroids <- function(zcta_id, state_abb){
   return(zcta_id_head %in% state_zip_prefix)
 }
 
-# Function for computing distances between the weighted and unweighted centroid
+#' Compute centroid distances
+#'
+#' Function for computing distances between the weighted and unweighted centroid within a state
+#' @param state A state's postal abbreviation.
+#' @returns A data.frame containing the distance (in meters) between an unweighted and population-weighted ZCTA centroid
 centroid_distances <- function(state){
   uwc <- st_read("data/unweighted_centroids/zcta_unweighted_centroids.shp")
   uwc <- uwc[filter_unweighted_centroids(uwc$ZCTA5CE20, state),]
@@ -125,7 +167,12 @@ centroid_distances <- function(state){
   return(centroid_dists)
 }
 
-# Function sets up the long-form distance matrix between hospital and centroids
+#' Compute ZCTA - Hospital Distance matrix.
+#'
+#' Function sets up the long-form distance matrix between hospital and centroids
+#' @param state A state's postal abbreviation.
+#' @param centroid Either `weighted` or `unweighted` for type of ZCTA centroid to use.
+#' @returns A data.frame of the distance in long-form (one row for each ZCTA - hospital pair).
 distance_matrix <- function(state, centroid = c("weighted", "unweighted")){
   cat(paste0("Running function for ", state, "...\n"))
   
@@ -197,7 +244,11 @@ distance_matrix <- function(state, centroid = c("weighted", "unweighted")){
   return(dist_mat_long)
 }
 
-# Run the distance_matrix function for a list of states
+#' Run `distance_matrix` function
+#'
+#' Wrapper function for running the `distance_matrix` function for a given state
+#' @param state A state's postal abbreviation.
+#' @param centroid Either `weighted` or `unweighted` for type of ZCTA centroid to use.
 run_dist_mat <- function(state, centroid = c("weighted", "unweighted")){
   centroid = match.arg(centroid)
   dist_mat_long <- distance_matrix(state, centroid)
@@ -205,7 +256,11 @@ run_dist_mat <- function(state, centroid = c("weighted", "unweighted")){
   data.table::fwrite(dist_mat_long, file_name)
 }
 
-# Function for merging ZIP code into the distance matrix with google maps data
+#' Merge ZIP to distance matrix
+#'
+#' Function for merging ZIP code into the distance matrix with google maps data
+#' @param state A state's postal abbreviation.
+#' @reutrns A state's long-form distance matrix augmented with ZIP code.
 merge_zip <- function(state){
   dist_mat_long <- data.table::fread(
     paste0("data/distance_matrix_gmaps/", state, '_weighted_gmaps_dist_mat.csv'),
@@ -231,6 +286,10 @@ merge_zip <- function(state){
   return(dist_mat_long)
 }
 
+#' Run `merge_zip` function
+#'
+#' Wrapper function for running the `merge_zip` function for a state
+#' @param state A state's postal abbreviation
 run_merge_zip <- function(state){
   dist_mat_long <- merge_zip(state, centroid)
   file_name <- paste0("data/distance_matrix_gmaps/", state, "_ZIP_weighted_gmaps_dist_mat.csv")
@@ -238,7 +297,12 @@ run_merge_zip <- function(state){
 }
 
 
-# Function for selecting a CBSA, with user-input in cases of ambiguity of selection
+#' Get CBSA
+#'
+#' Function for selecting a CBSA, with user-input in cases of ambiguity of selection
+#' @param area_name Character string of CBSA to search for.
+#' @param cbsa_shp CBSA shape file to use.
+#' @returns A data.frame containing the CBSA sf data that was selected.
 get_cbsa <- function(area_name, cbsa_shp){
   # Get list of matching CBSA names
   matches <- cbsa_shp[grep(area_name, cbsa_shp$NAME, ignore.case = TRUE),]
@@ -263,7 +327,13 @@ get_cbsa <- function(area_name, cbsa_shp){
   }
 }
 
-# Finds the population-weighted centroids that belong to a CBSA
+#' Find ZCTA in CBSA
+#' 
+#' Finds the population-weighted centroids that belong to a CBSA
+#' @param area_name Character string of CBSA to search for
+#' @param cbsa_shp Shape file for the CBSAs
+#' @param crs The coordinate reference system specification to be used for determining inclusion within a CBSA area
+#' @returns A data.frame of the ZCTAs that belong to the CBSA
 find_zcta_in_cbsa <- function(area_name, cbsa_shp, crs) {
   # Get location name
   location <- get_cbsa(area_name, cbsa_shp)
@@ -290,7 +360,11 @@ find_zcta_in_cbsa <- function(area_name, cbsa_shp, crs) {
   return(pwc_matches)
 }
 
-# Function for computing the Haversine distance matrix between hospitals within a state
+#' Hospital - Hospital distance matrix
+#'
+#' Function for computing the Haversine distance matrix between hospitals within a state
+#' @param state A state's postal abbreviation.
+#' @returns A long-form distance matrix between hospitals in a state (hospital - hospital pair per row)
 distance_matrix_hospital <- function(state) {
   cat(paste0("Running function for ", state, "...\n"))
   
@@ -319,7 +393,10 @@ distance_matrix_hospital <- function(state) {
   return(hospital_dist_mat_long)
 }
 
-# Run the distance_matrix_hospital function for a list of states
+#' Run `distance_matrix_hospital`
+#'
+#' Wrapper function for running the `distance_matrix_hospital` function for a state
+#' @param state A state's postal abbreviation
 run_dist_mat_hosp <- function(state){
   dist_mat_long_hosp <- distance_matrix_hospital(state)
   file_name <- paste0("data/distance_matrix_hospital/", state, "_dist_mat_hosp.csv")
@@ -329,5 +406,6 @@ run_dist_mat_hosp <- function(state){
 ##############################################################
 # Global variable definitions
 ##############################################################
+# Vector of state postal abbreviations for state's in dataset
 states <- c("AZ", "CA", "CO", "FL", "LA", "MA", "MI", "NV",
             "NJ", "NY", "OR", "PA", "SC", "TN", "VA", "WV")
