@@ -3,4 +3,4 @@
 source("code/functions.r")
 
 # Run the distance matrix function
-sapply(states, run_dist_mat)
+sapply(states, run_merge_zip)

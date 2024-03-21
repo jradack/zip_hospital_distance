@@ -231,8 +231,7 @@ merge_zip <- function(state){
   return(dist_mat_long)
 }
 
-# Run the merge_zip function for a list of states
-run_dist_mat <- function(state){
+run_merge_zip <- function(state){
   dist_mat_long <- merge_zip(state, centroid)
   file_name <- paste0("data/distance_matrix_gmaps/", state, "_ZIP_weighted_gmaps_dist_mat.csv")
   data.table::fwrite(dist_mat_long, file_name)
