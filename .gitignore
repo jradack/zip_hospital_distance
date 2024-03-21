@@ -6,6 +6,7 @@
 data/raw/
 data/distance_matrix/
 data/distance_matrix_gmaps/
+data/distance_matrix_hospital/
 data/unweighted_centroids/
 data/weighted_centroids/
 output/*.html

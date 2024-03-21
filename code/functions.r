@@ -291,6 +291,41 @@ find_zcta_in_cbsa <- function(area_name, cbsa_shp, crs) {
   return(pwc_matches)
 }
 
+# Function for computing the Haversine distance matrix between hospitals within a state
+distance_matrix_hospital <- function(state) {
+  cat(paste0("Running function for ", state, "...\n"))
+  
+  # Load CRS and hospitals dataset
+  cat("Reading in data...\n")
+  crs <- readRDS("data/crs.rds")
+  hospitals <- fread("data/hospital_unique_aha_20230223.csv",
+                     colClasses = c("ID"="character","FIPS_STATE"="character"))
+  
+  # Convert to sf object, filter to state
+  hospitals_sf <- st_as_sf(hospitals, coords = c("longitude","latitude"),
+                           crs = crs)
+  hospitals_sf <- hospitals_sf[which(hospitals_sf$state == state),]
+  colnames(hospitals_sf) <- c("hospital_id", "year", "fips_state", "state", "geometry")
+  
+  # Compute Haversine distance in meters
+  cat("Computing distance matrix...\n")
+  hospital_dist_mat <- st_distance(hospitals_sf, hospitals_sf)
+  rownames(hospital_dist_mat) <- colnames(hospital_dist_mat) <- hospitals_sf$hospital_id
+  
+  # Convert matrix into long dataset, clean up
+  cat("Cleaning and returning output...\n")
+  hospital_dist_mat_long <- as.data.frame(as.table(hospital_dist_mat))
+  colnames(hospital_dist_mat_long) <- c("src_hospital_id", "dest_hospital_id", "haversine_dist_m")
+  
+  return(hospital_dist_mat_long)
+}
+
+# Run the distance_matrix_hospital function for a list of states
+run_dist_mat_hosp <- function(state){
+  dist_mat_long_hosp <- distance_matrix_hospital(state)
+  file_name <- paste0("data/distance_matrix_hospital/", state, "_dist_mat_hosp.csv")
+  data.table::fwrite(dist_mat_long_hosp, file_name)
+}
 
 ##############################################################
 # Global variable definitions

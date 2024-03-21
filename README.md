@@ -6,7 +6,8 @@ Code and data for project calculating the distance and drive times between mater
 ## Code
 
 - `centroids_distances.r`: Computes and analyzes the distances between weighted and unweighted ZCTA centroids.
-- `distance_matrix.r`: Computes the long-form (Haversine) distance matrix between ZCTA centroids and hosptial addresses. The output dataset is fed to the script for querying the googlemaps API.
+- `distance_matrix.r`: Computes the long-form (Haversine) distance matrix between ZCTA centroids and hospital addresses. The output dataset is fed to the script for querying the googlemaps API.
+- `distance_matrix_hospital.r`: Computes the long-form Haversine distance matrix between hospital addresses within the same state.
 - `function.r`: Contains all of the R functions used within the other R scripts.
 - `googlemaps_request.py`: Makes the API calls for driving/transit distance and time between ZCTA centroids and hospital addresses.
 - `merge_zip_codes.r`: Merges ZIP code information to the distance matrices with google maps data.
@@ -17,11 +18,18 @@ Code and data for project calculating the distance and drive times between mater
 - `zcta_cbsa_cw.r`: Creates a crosswalk between ZCTAs and core-based statistical areas (metropolitan and micropolitan statistical areas).
 - `zip_code_prefix_scrape.py`: Scrapes the Wikipedia page with a table that crosswalks three-digit ZIP code prefixes to states.
 
+### Hospital - ZIP Distance Matrix
+
 To generate the distance matrix output from scratch, run the scripts in the following order:
+
 1. `pop_weight_centroid.r`
 2. `distance_matrix.r`
 3. `googlemaps_request.py`
 4. `merge_zip_codes.r`
+
+### Hospital - Hospital Distance Matrix
+
+To generate the distance matrices between hospitals within the same state, run the script `distance_matrix_hospital.r`.
 
 ## Data
 
@@ -34,7 +42,7 @@ The following raw data files are not included in this repository.
 - Core-Based Statistical Area shapefile from the [Census Bureau](https://www2.census.gov/geo/tiger/TIGER2020/CBSA/).
 - ZIP Code - ZCTA crosswalk from [UDS Mapper](https://udsmapper.org/zip-code-to-zcta-crosswalk/).
 
-### Distance Matrix Data Dictionary
+### Hospital - ZIP Distance Matrix Data Dictionary
 
 There are two versions of the distance matrix file for each state - one without the Google maps columns, and one with the Google maps columns.
 The same hospital - ZCTA pair may be represented multiple times in a file since multiple ZIP codes mapped to the same ZCTA in the crosswalk.
@@ -59,3 +67,10 @@ If the value for any of the Google maps columns is -1, this means that Google ma
 - `distance_transit_m` : (num) Google maps transit distance in meters
 - `duration_transit_sec` : (num) Google maps transit time in seconds
 
+### Hospital - Hospital Distance Matrix Data Dictionary
+
+The distance between two hospitals is symmetrical, and the labeling of source and destination hospitals is out of completeness and convenience for merging/filtering.
+
+- `src_hospital_id`: (chr) AHA ID of the source hospital
+- `dest_hospital_id`: (chr) AHA ID of the destination hospital
+- `haversine_dist_m`: (num) Crow-flies (Haversine) distance between the two hospital addresses, in meters
