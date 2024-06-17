@@ -45,7 +45,7 @@ pa_dist_mat <- pa_dist_mat_raw %>%
     )
   ) %>%
   mutate(
-    depTime = paste(date, time, am_pm),
+    dep_time = paste(date, time, am_pm),
     hospital_id_label = case_match(
       hospital_id,
       "6231730" ~ "CHOP",
@@ -71,7 +71,7 @@ pa_dist_mat <- pa_dist_mat_raw %>%
     -c(date, time, am_pm)
   ) %>%
   arrange(
-    hospital_id, zip_code, strptime(depTime, format = "%Y-%m-%d %I:%M %p")
+    hospital_id, zip_code, strptime(dep_time, format = "%Y-%m-%d %I:%M %p")
   )
 
 # Write out dataset

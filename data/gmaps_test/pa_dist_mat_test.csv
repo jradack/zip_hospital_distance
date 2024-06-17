@@ -1,4 +1,4 @@
-state,fips_state,year,hospital_id,hospital_latitude,hospital_longitude,zcta_geoid,zip_code,zcta_latitude,zcta_longitude,haversine_dist_m,orig_distance_driving_m,orig_duration_driving_sec,orig_distance_transit_m,orig_duration_transit_sec,depTime,hospital_id_label,zip_code_label
+state,fips_state,year,hospital_id,hospital_latitude,hospital_longitude,zcta_geoid,zip_code,zcta_latitude,zcta_longitude,haversine_dist_m,orig_distance_driving_m,orig_duration_driving_sec,orig_distance_transit_m,orig_duration_transit_sec,dep_time,hospital_id_label,zip_code_label
 PA,42,2019,6230043,39.9498,-75.1584,19096,19096,39.9944025890936,-75.2735468139114,10994.4477093757,13958,1670,14151,2654,2024-06-26 12:00 AM,Thomas Jefferson University Hospital,Wynnewood
 PA,42,2019,6230043,39.9498,-75.1584,19096,19096,39.9944025890936,-75.2735468139114,10994.4477093757,13958,1670,14151,2654,2024-06-26 01:00 AM,Thomas Jefferson University Hospital,Wynnewood
 PA,42,2019,6230043,39.9498,-75.1584,19096,19096,39.9944025890936,-75.2735468139114,10994.4477093757,13958,1670,14151,2654,2024-06-26 02:00 AM,Thomas Jefferson University Hospital,Wynnewood
