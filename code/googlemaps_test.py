@@ -53,8 +53,8 @@ def makeRequest(gmaps, zcta_geoid, hospital_id, origin_lat, origin_lon, destinat
 def makeRequestState(gmaps, use_subset = False, subset_size = 10):
     print(f'Processing test dataset cut:')
     # Set file paths
-    input_csv = f'data/gmaps_test/pa_dist_mat.csv'
-    output_csv = f'data/gmaps_test/pa_dist_mat_gmaps.csv'
+    input_csv = f'data/gmaps_test/pa_dist_mat_test.csv'
+    output_csv = f'data/gmaps_test/pa_dist_mat_test_gmaps.csv'
     # Copy file if it doesn't exist yet
     output_file = Path(output_csv)
     if not output_file.is_file():
@@ -78,8 +78,9 @@ def makeRequestState(gmaps, use_subset = False, subset_size = 10):
             # if distMat["distance_driving_m"][ind] != None:
             #     next
             # Make API Requests
-            result_driving = makeRequest(gmaps, distMat['zcta_geoid'][ind], distMat["hospital_id"][ind], distMat["zcta_latitude"][ind], distMat["zcta_longitude"][ind], distMat["hospital_latitude"][ind], distMat["hospital_longitude"][ind], "driving", distMat['dep_time'][ind])
-            result_transit = makeRequest(gmaps, distMat['zcta_geoid'][ind], distMat["hospital_id"][ind], distMat["zcta_latitude"][ind], distMat["zcta_longitude"][ind], distMat["hospital_latitude"][ind], distMat["hospital_longitude"][ind], "transit", distMat['dep_time'][ind])
+            dep_time = datetime.strptime(distMat['dep_time'][ind], '%Y-%m-%d %I:%M %p')
+            result_driving = makeRequest(gmaps, distMat['zcta_geoid'][ind], distMat["hospital_id"][ind], distMat["zcta_latitude"][ind], distMat["zcta_longitude"][ind], distMat["hospital_latitude"][ind], distMat["hospital_longitude"][ind], "driving", dep_time)
+            result_transit = makeRequest(gmaps, distMat['zcta_geoid'][ind], distMat["hospital_id"][ind], distMat["zcta_latitude"][ind], distMat["zcta_longitude"][ind], distMat["hospital_latitude"][ind], distMat["hospital_longitude"][ind], "transit", dep_time)
             # Save results
             distMat.at[ind, "distance_driving_m"] = result_driving["distance_driving_m"]
             distMat.at[ind, "duration_driving_sec"] = result_driving["duration_driving_sec"]
@@ -93,14 +94,12 @@ def makeRequestState(gmaps, use_subset = False, subset_size = 10):
 
 def main():
     # Read in API key and set up states list
-    secret_file, states = ['secret_test_account', ["ABC"]]
+    secret_file = 'secret_test_account'
     with open(f'data/raw/{secret_file}.txt', 'r') as file:
         api_key = file.read().rstrip()
     # Create googlemaps object
     gmaps_obj = googlemaps.Client(key=api_key, requests_kwargs={"verify": False})
-    for state in states:
-        # makeRequestState(gmaps_obj, state)
-        makeRequestState(gmaps_obj, state, use_subset = True, subset_size = 1)
+    makeRequestState(gmaps_obj)
 
 
 
