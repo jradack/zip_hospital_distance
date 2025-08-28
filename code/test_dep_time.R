@@ -59,7 +59,7 @@ pa_dist_mat <- pa_dist_mat_raw %>%
       "19148" ~ "South Philadelphia",
       "19143" ~ "West Philadelphia",
       "19107" ~ "Center City",
-      "19144" ~ "Northeast Philadelphia",
+      "19144" ~ "Germantown",
       "19096" ~ "Wynnewood"
     )
   ) %>%
