@@ -403,6 +403,62 @@ run_dist_mat_hosp <- function(state){
   data.table::fwrite(dist_mat_long_hosp, file_name)
 }
 
+#' Create pairwise hospital dataset
+#'
+#' Creates a long-form data set of all unique pairs of hospitls (unordered) in a state
+#' with their latitude and longitude included. The dataset will be used for mapping and
+#' calculating distances
+#' @param cur_state A state's postal abbreviation
+#' @returns A data.frame containing two columns of hospital ID, and corresponding latitude and longitude
+hospital_pairwise_matrix <- function(cur_state) {
+  cat(paste0("Running function for ", cur_state, "...\n"))
+  
+  # Load CRS and hospitals dataset
+  cat("Reading in data...\n")
+  hospitals <- fread("data/hospital_unique_aha_20230223.csv",
+                     colClasses = c("ID"="character","FIPS_STATE"="character"))
+  
+  # Filter to state
+  hospitals_state <- hospitals[which(hospitals$state == cur_state),]
+  
+  # Create data frame with distinct hospital pairs (unordered)
+  cat("Creating pairwise dataset...\n")
+  hospitals_state_pairs <- combn(hospitals_state$ID, 2) |>
+    t() |>
+    as.data.frame()
+  colnames(hospitals_state_pairs) <- c("hospital_1", "hospital_2")
+  
+  # Join the hospital latitude and longitude
+  cat("Merging latitude/longitude, cleaning up...\n")
+  hospitals_state_pairs_lat_lon <- merge(
+    x = hospitals_state_pairs, y = hospitals[, c("ID", "latitude", "longitude")],
+    by.x = "hospital_1", by.y = "ID",
+    all.x = TRUE
+  )
+  colnames(hospitals_state_pairs_lat_lon)[3:4] <- c("hospital_1_latitude", "hospital_1_longitude")
+  
+  hospitals_state_pairs_lat_lon <- merge(
+    x = hospitals_state_pairs_lat_lon, y = hospitals[, c("ID", "latitude", "longitude")],
+    by.x = "hospital_2", by.y = "ID",
+    all.x
+  )
+  colnames(hospitals_state_pairs_lat_lon)[5:6] <- c("hospital_2_latitude", "hospital_2_longitude")
+  
+  hospitals_state_pairs_lat_lon <- hospitals_state_pairs_lat_lon[,c("hospital_1", "hospital_2", "hospital_1_latitude", "hospital_1_longitude", "hospital_2_latitude", "hospital_2_longitude")]
+  
+  return(hospitals_state_pairs_lat_lon)
+}
+
+#' Run `hospital_pairwise_matrix`
+#'
+#' @param state A state's postal abbreviation
+run_pairwise_hosp <- function(state){
+  pairwise_hosp <- hospital_pairwise_matrix(state)
+  file_name <- paste0("data/pairwise_hospital/", state, "_pairwise_hosp.csv")
+  data.table::fwrite(pairwise_hosp, file_name)
+}
+
+
 ##############################################################
 # Global variable definitions
 ##############################################################
